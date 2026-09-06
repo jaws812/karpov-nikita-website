@@ -1,0 +1,76 @@
+html {
+  *:focus {
+    outline-color: var(--color-black);
+  }
+}
+
+#root {
+  display: contents;
+}
+
+body {
+  @include fluid-text(20, 16);
+  line-height: 1.6;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-family-mono), sans-serif;
+  color: var(--color-gray);
+  background-color: var(--color-dark);
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  color: var(--color-light);
+  font-family: var(--font-family-manrope), sans-serif;
+  font-weight: 700;
+}
+
+h1, .h1 {
+  @include fluid-text(96, 44);
+  line-height: 1;
+  letter-spacing: -2.9px;
+}
+
+h2, .h2 {
+  @include fluid-text(60, 30);
+  line-height: 1;
+  letter-spacing: -1.8px;
+}
+
+h3, .h3 {
+  @include fluid-text(24, 20);
+  line-height: 1;
+}
+
+a,
+input,
+label,
+button {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  @include hover {
+    color: var(--color-green-1);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  @include focus-visible;
+}

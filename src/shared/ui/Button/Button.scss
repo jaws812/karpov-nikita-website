@@ -1,0 +1,22 @@
+.button {
+  @include flex-center(true);
+
+  border: var(--border);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-light);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 55px;
+
+  &--wide{
+    padding-inline: 100px;
+  }
+
+  &--small{
+    font-size: 14px;
+    font-weight: 400;
+    padding: 8px 16px;
+    border: none;
+    background-color: var(--color-dark-4);
+  }
+}

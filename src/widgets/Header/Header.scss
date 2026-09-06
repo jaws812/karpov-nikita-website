@@ -1,0 +1,68 @@
+.header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-dark);
+  border-bottom: 1px solid transparent;
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+
+  @keyframes scrolling-header {
+    to {
+      background-color: var(--color-dark-2);
+      border-color: var(--color-dark-6);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: fluid(21, 12);
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__logo {
+//    width: fluid(144, 94);
+
+    @include mobile-s {
+      @include visually-hidden();
+    }
+  }
+
+  &__menu {
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    &-link {
+      padding: 8px 10px;
+
+      @include hover {
+        color: var(--color-green-1);
+      }
+    }
+
+    @include laptop {
+      @include visually-hidden();
+    }
+  }
+
+  &__name {
+    font-family: var(--font-family-manrope), sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-light);
+  }
+}
