@@ -3,6 +3,33 @@ import './Header.scss'
 import Logo from "@/shared/ui/Logo";
 
 const Header = () => {
+  const menuItems = [
+    {
+      label: 'Обо мне',
+      href: '#',
+    },
+    {
+      label: 'Стек',
+      href: '#',
+    },
+    {
+      label: 'Стек',
+      href: '#',
+    },
+    {
+      label: 'Путь',
+      href: '#',
+    },
+    {
+      label: 'Как я работаю',
+      href: '#',
+    },
+    {
+      label: 'Контакты',
+      href: '#',
+    },
+  ]
+
   return (
     <header className="header">
       <div className="header__wrapper container">
@@ -12,54 +39,18 @@ const Header = () => {
         </div>
         <nav className="header__menu">
           <ul className="header__menu-list">
-            <li className="header__menu-item">
-              <a
-                className="header__menu-link"
-                href="#"
-              >
-                Обо мне
-              </a>
-            </li>
-            <li className="header__menu-item">
-              <a
-                className="header__menu-link"
-                href="#"
-              >
-                Стек
-              </a>
-            </li>
-            <li className="header__menu-item">
-              <a
-                className="header__menu-link"
-                href="#"
-              >
-                Проекты
-              </a>
-            </li>
-            <li className="header__menu-item">
-              <a
-                className="header__menu-link"
-                href="#"
-              >
-                Путь
-              </a>
-            </li>
-            <li className="header__menu-item">
-              <a
-                className="header__menu-link"
-                href="#"
-              >
-                Как я работаю
-              </a>
-            </li>
-            <li className="header__menu-item">
-              <a
-                className="header__menu-link"
-                href="#"
-              >
-                Контакты
-              </a>
-            </li>
+            {menuItems.map(({label, href}) => {
+              return (
+                <li className="header__menu-item">
+                  <a
+                    className="header__menu-link"
+                    href={href}
+                  >
+                    {label}
+                  </a>
+                </li>
+              )
+            })}
           </ul>
         </nav>
         <div className="header__action">
