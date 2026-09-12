@@ -2,6 +2,10 @@ html {
   *:focus {
     outline-color: var(--color-black);
   }
+
+  &.is-lock {
+    overflow: hidden;
+  }
 }
 
 #root {

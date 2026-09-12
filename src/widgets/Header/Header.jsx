@@ -1,6 +1,7 @@
 import Button from "@/shared/ui/Button";
-import './Header.scss'
 import Logo from "@/shared/ui/Logo";
+import BurgerButton from "@/shared/ui/BurgerButton";
+import './Header.scss'
 
 const Header = () => {
   const menuItems = [
@@ -30,6 +31,14 @@ const Header = () => {
     },
   ]
 
+  const onClick = (event) => {
+    const overlayMenu = document.querySelector('[data-js-overlay-menu-dialog]')
+
+    event.currentTarget.classList.toggle("is-active")
+    overlayMenu.open = !overlayMenu.open
+    document.documentElement.classList.toggle("is-lock")
+  }
+
   return (
     <header className="header">
       <div className="header__wrapper container">
@@ -37,11 +46,17 @@ const Header = () => {
           <Logo className="header__logo" />
           <div className="header__name">Никита Карпов</div>
         </div>
-        <nav className="header__menu">
-          <ul className="header__menu-list">
-            {menuItems.map(({label, href}) => {
-              return (
-                <li className="header__menu-item">
+        <dialog
+          className="header__overlay-menu-dialog"
+          data-js-overlay-menu-dialog=''
+        >
+          <nav className="header__menu">
+            <ul className="header__menu-list">
+              {menuItems.map(({label, href}, index) => (
+                <li
+                  className="header__menu-item"
+                  key={index}
+                >
                   <a
                     className="header__menu-link"
                     href={href}
@@ -49,10 +64,10 @@ const Header = () => {
                     {label}
                   </a>
                 </li>
-              )
-            })}
-          </ul>
-        </nav>
+              ))}
+            </ul>
+          </nav>
+        </dialog>
         <div className="header__action">
           <div className="header__action-soc1als">
             <Button
@@ -62,9 +77,12 @@ const Header = () => {
             >Telegram</Button>
           </div>
         </div>
+        <BurgerButton
+          className={"header__burger-button"}
+          onClick={onClick}
+        />
       </div>
     </header>
-
   )
 }
 
