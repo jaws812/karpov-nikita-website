@@ -7,6 +7,7 @@ const Button = (props) => {
     type = 'button',
     href,
     target,
+    isWide,
   } = props
 
   const isLink = href !== undefined
@@ -17,7 +18,7 @@ const Button = (props) => {
 
   return (
     <Component
-      className={`${className} button`}
+      className={`${className} button ${isWide ? 'button--wide' : ''}`}
       {...specificProps}
     >
       {children}

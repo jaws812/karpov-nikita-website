@@ -9,6 +9,11 @@
   font-weight: 700;
   padding: 16px 55px;
 
+  @include hover{
+    color: var(--color-green-4);
+    background-color: var(--color-green-1);
+  }
+
   &--wide {
     padding-inline: 100px;
   }

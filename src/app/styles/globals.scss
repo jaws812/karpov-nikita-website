@@ -29,6 +29,11 @@ body {
 
 main {
   flex-grow: 1;
+  width: 100%;
+}
+
+.section {
+  padding-block: fluid(128, 64);
 }
 
 h1, .h1,
