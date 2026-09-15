@@ -1,0 +1,23 @@
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: fluid(64, 20);
+
+  &__badge{
+    padding: 32px;
+    border: var(--border);
+    border-radius: var(--border-radius-md);
+    background-color: var(--color-dark-3);
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

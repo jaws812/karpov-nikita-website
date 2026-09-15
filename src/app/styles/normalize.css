@@ -81,7 +81,7 @@ p {
   который расположен не последним среди своих соседних элементов
  */
 :where(p:not([class]):not(:last-child)) {
-  margin-bottom: var(--paragraphMarginBottom);
+  margin-bottom: var(--paragraphMarginBottom) !important;
 }
 
 

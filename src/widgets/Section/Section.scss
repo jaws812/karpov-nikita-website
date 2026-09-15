@@ -1,0 +1,36 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: fluid(24, 20);
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(24, 20);
+  }
+
+  &__step {
+    @include fluid-text(14, 12);
+
+    position: relative;
+    letter-spacing: 3.9px;
+    color: var(--color-green-1);
+    text-transform: uppercase;
+    padding-left: fluid(60, 44);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      translate: 0 -50%;
+      width: fluid(48, 32);
+      height: 1px;
+      background-color: var(--color-green-1);
+    }
+  }
+
+  &__title {
+    letter-spacing: -1.8px;
+  }
+}

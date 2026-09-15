@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  @include fluid-text(20, 16);
+  @include fluid-text(16, 14);
   line-height: 1.6;
 
   display: flex;
