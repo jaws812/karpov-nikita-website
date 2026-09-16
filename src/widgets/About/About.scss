@@ -3,11 +3,19 @@
   grid-template-columns: repeat(2, 1fr);
   gap: fluid(64, 20);
 
+  @include mobile{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   &__badge{
     padding: 32px;
     border: var(--border);
     border-radius: var(--border-radius-md);
     background-color: var(--color-dark-3);
+
+    @include mobile{
+      padding: 36px 24px;
+    }
   }
 
   &__list{
@@ -19,5 +27,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
+    padding-block: fluid(14,12);
+
+    &:not(:last-child){
+      border-bottom: var(--border);
+    }
+
+    &-description{
+      color: var(--color-light);
+      text-align: end;
+    }
   }
 }
