@@ -1,0 +1,42 @@
+.metric {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: fluid-to-laptop(64, 32);
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 8px;
+
+    @include mobile {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__value {
+    @include fluid-text(96, 60);
+    font-family: var(--font-family-manrope), sans-serif;
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: -3.8px;
+    color: var(--color-green-1);
+
+    &--subtitle {
+      font-size: fluid-to-laptop(24, 20);
+      font-family: var(--font-family-manrope), sans-serif;
+      font-weight: 700;
+      letter-spacing: 0px;
+      color: var(--color-light);
+      margin-top: fluid(24, 12);
+    }
+  }
+}

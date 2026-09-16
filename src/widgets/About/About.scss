@@ -1,42 +1,57 @@
 .about {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: fluid(64, 20);
+  display: flex;
+  flex-direction: column;
+  gap: fluid(24, 20);
 
-  @include mobile{
+  @include mobile {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  &__badge{
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid(64, 20);
+    margin-top: fluid(24, 0);
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  &__badge {
     padding: 32px;
     border: var(--border);
     border-radius: var(--border-radius-md);
     background-color: var(--color-dark-3);
 
-    @include mobile{
+    @include mobile {
       padding: 36px 24px;
     }
   }
 
-  &__list{
+  &__list {
     display: flex;
     flex-direction: column;
   }
 
-  &__item{
+  &__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-    padding-block: fluid(14,12);
+    padding-block: fluid(14, 12);
 
-    &:not(:last-child){
+    &:not(:last-child) {
       border-bottom: var(--border);
     }
 
-    &-description{
+    &-description {
       color: var(--color-light);
       text-align: end;
     }
+  }
+
+  &__metric{
+    margin-top: fluid(72, 44);
   }
 }

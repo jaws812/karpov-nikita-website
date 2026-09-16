@@ -1,0 +1,7 @@
+.stack-card {
+  padding: 32px;
+
+  @include mobile {
+    padding: 44px 24px 24px;
+  }
+}

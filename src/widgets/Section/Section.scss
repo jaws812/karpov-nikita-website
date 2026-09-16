@@ -1,7 +1,14 @@
 .section {
-  display: flex;
-  flex-direction: column;
-  gap: fluid(24, 20);
+
+  &:nth-child(2n) {
+    background-color: var(--color-dark-2);
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: fluid(24, 20);
+  }
 
   &__header {
     display: flex;
