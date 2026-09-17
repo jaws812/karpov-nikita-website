@@ -1,6 +1,7 @@
 import Hero from "@/widgets/Hero";
 import About from "@/widgets/About";
 import Stack from "@/widgets/Stack";
+import Projects from "@/widgets/Projects";
 
 const Main = () => {
 
@@ -9,6 +10,7 @@ const Main = () => {
       <Hero />
       <About />
       <Stack />
+      <Projects />
     </main>
   )
 }
