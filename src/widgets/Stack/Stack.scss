@@ -1,0 +1,13 @@
+.stack {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: fluid(32, 20);
+  }
+
+  &__item{
+    background-color: var(--color-dark-3);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--box-shadow);
+  }
+}
