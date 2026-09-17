@@ -4,4 +4,39 @@
   @include mobile {
     padding: 44px 24px 24px;
   }
+
+  &__title {
+    letter-spacing: 3px;
+    color: var(--color-green-1);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding-block: fluid(15, 12);
+
+    &:not(:last-child) {
+      border-bottom: var(--border);
+    }
+
+    &-title {
+      @include fluid-text(20, 18);
+
+      font-family: var(--font-family-grotesk), sans-serif;
+      font-weight: 700;
+      color: var(--color-light);
+    }
+
+    &-description {
+      text-align: end;
+    }
+  }
 }

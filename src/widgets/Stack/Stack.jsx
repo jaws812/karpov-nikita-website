@@ -2,9 +2,7 @@ import './Stack.scss'
 import './StackCard.scss'
 import Section from "@/widgets/Section";
 
-const Stack = (props) => {
-  const {} = props
-
+const Stack = () => {
   const stackItems = [
     {
       title: 'Верстка',
@@ -99,7 +97,7 @@ const Stack = (props) => {
       stepTitle="02 &bull; СТЕК"
     >
       <div className="stack">
-        <div className="stack__list">
+        <ul className="stack__list">
           {stackItems.map(({title, property}) => (
             <li
               className="stack__item"
@@ -122,7 +120,7 @@ const Stack = (props) => {
             </li>
           ))}
 
-        </div>
+        </ul>
       </div>
     </Section>
   )
