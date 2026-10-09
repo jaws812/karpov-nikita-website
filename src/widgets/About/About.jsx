@@ -1,6 +1,6 @@
 import './About.scss'
 import './Metric.scss'
-import Section from "@/widgets/Section";
+import Section from "@/shared/ui/Section";
 
 const About = (props) => {
   const {} = props

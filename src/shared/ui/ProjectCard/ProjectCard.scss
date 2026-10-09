@@ -1,0 +1,55 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    align-self: flex-start;
+    font-size: 14px;
+    padding: 8px 17px;
+    border: var(--border);
+    border-bottom: none;
+    border-radius: var(--border-radius-sm) var(--border-radius-sm) 0 0;
+    background-color: var(--color-dark-3);
+    text-transform: uppercase;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border: var(--border);
+    border-radius: 0 var(--border-radius-md) var(--border-radius-md) var(--border-radius-md);
+    background-color: var(--color-dark-3);
+    padding: fluid(32, 24);
+  }
+
+  &__counter {
+    font-size: 14px;
+    color: var(--color-green-1);
+  }
+
+  &__title {
+    @include fluid-text(30, 24);
+
+    margin-top: 2px;
+    color: var(--color-light);
+    font-weight: 700;
+  }
+
+  &__description {
+    margin-top: 9px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: fluid(14, 10);
+  }
+
+  &__item {
+    padding: 4px 10px;
+    background-color: var(--color-dark-7);
+    border-radius: var(--border-radius-sm);
+  }
+}

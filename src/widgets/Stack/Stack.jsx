@@ -1,6 +1,6 @@
 import './Stack.scss'
 import './StackCard.scss'
-import Section from "@/widgets/Section";
+import Section from "@/shared/ui/Section";
 
 const Stack = () => {
   const stackItems = [
