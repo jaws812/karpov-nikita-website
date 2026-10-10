@@ -1,6 +1,7 @@
 import './Projects.scss'
 import Section from "@/shared/ui/Section";
 import ProjectCard from "@/shared/ui/ProjectCard";
+import Grid from "@/shared/ui/Grid";
 
 
 const Projects = () => {
@@ -45,13 +46,14 @@ const Projects = () => {
       stepTitle="03 &bull; ПРОЕКТЫ"
       actionButton
     >
-      <div className="projects">
+      <Grid gapClassName="projects-gap">
         {projectItems.map((item) => (
           <ProjectCard
             {...item}
+            key={item.count}
           />
         ))}
-      </div>
+      </Grid>
     </Section>
   )
 }

@@ -1,5 +1,8 @@
 .stack-card {
   padding: 32px;
+  background-color: var(--color-dark-3);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--box-shadow);
 
   @include mobile {
     padding: 44px 24px 24px;

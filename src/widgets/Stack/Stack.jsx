@@ -1,6 +1,7 @@
 import './Stack.scss'
-import './StackCard.scss'
 import Section from "@/shared/ui/Section";
+import StackCard from "@/shared/ui/StackCard";
+import Grid from "@/shared/ui/Grid";
 
 const Stack = () => {
   const stackItems = [
@@ -26,7 +27,7 @@ const Stack = () => {
       ],
     },
     {
-      title: 'СКРИПТЫ',
+      title: 'Скрипты',
       property: [
         {
           title: 'JavaScript',
@@ -47,7 +48,7 @@ const Stack = () => {
       ],
     },
     {
-      title: 'БЭКЕНД И CMS',
+      title: 'Бэкэнд и CMS',
       property: [
         {
           title: 'PHP',
@@ -68,7 +69,7 @@ const Stack = () => {
       ],
     },
     {
-      title: 'ИНСТРУМЕНТЫ',
+      title: 'Инструменты',
       property: [
         {
           title: 'Git',
@@ -96,32 +97,11 @@ const Stack = () => {
       title="Инструменты, которыми пользуюсь каждый день"
       stepTitle="02 &bull; СТЕК"
     >
-      <div className="stack">
-        <ul className="stack__list">
-          {stackItems.map(({title, property}) => (
-            <li
-              className="stack__item"
-              key={title}
-            >
-              <div className="stack-card">
-                <div className="stack-card__title">{title}</div>
-                <ul className="stack-card__list">
-                  {property.map(({title, description}) => (
-                    <li
-                      className="stack-card__item"
-                      key={title}
-                    >
-                      <div className="stack-card__item-title">{title}</div>
-                      <div className="stack-card__item-description">{description}</div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </li>
-          ))}
-
-        </ul>
-      </div>
+      <Grid>
+        {stackItems.map((stackItem) => (
+          <StackCard {...stackItem} key={stackItem.title} />
+        ))}
+      </Grid>
     </Section>
   )
 }

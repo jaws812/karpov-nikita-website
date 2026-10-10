@@ -1,0 +1,24 @@
+.grid {
+  --absoluteGap: #{fluid(32,20)};
+  --gridColumns: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--gridColumns), 1fr);
+  gap: var(--absoluteGap);
+
+  &__item {
+    list-style: none;
+  }
+
+  &--2 {
+    --gridColumns: 2;
+  }
+
+  &--projects-gap {
+    --absoluteGap: #{fluid(40,32)};
+  }
+
+  @include tablet {
+    --gridColumns: 1;
+  }
+}
