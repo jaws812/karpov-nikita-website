@@ -1,0 +1,17 @@
+.work-card {
+  display: flex;
+  flex-direction: column;
+  gap: fluid(12, 10);
+  border-top: var(--border);
+  margin-top: fluid(40, 28);
+
+  &__counter {
+    font-size: 14px;
+    color: var(--color-green-1);
+    padding-top: fluid(24, 20);
+  }
+
+  &__description {
+    margin-top: 2px;
+  }
+}

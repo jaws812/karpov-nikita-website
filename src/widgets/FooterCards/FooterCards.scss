@@ -1,0 +1,61 @@
+.footer-cards {
+  background-color: var(--color-dark-4);
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-block: fluid(112, 80);
+  }
+
+  &__connection {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+
+  &__title {
+    margin-bottom: fluid(9, 0);
+  }
+
+  &__description {
+    margin-bottom: fluid(44, 27);
+  }
+
+  &__description {
+    @include fluid-text(20, 16);
+
+    text-align: center;
+
+    @include mobile-above {
+      max-width: 516px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: fluid(41, 33);
+    padding-bottom: fluid(48, 40);
+    border-top: var(--border);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 27px fluid(35, 23);
+  }
+
+  &__extra {
+    text-align: center;
+  }
+}

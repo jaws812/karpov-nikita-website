@@ -2,8 +2,7 @@ import './About.scss'
 import './Metric.scss'
 import Section from "@/shared/ui/Section";
 
-const About = (props) => {
-  const {} = props
+const About = () => {
 
   const infoItems = [
     {

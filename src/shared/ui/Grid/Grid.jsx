@@ -5,19 +5,20 @@ const Grid = (props) => {
     children,
     columns = 2,
     gapClassName,
+    actionClassName,
   } = props
 
   return (
-    <div
+    <ul
       className={`grid ${columns > 1 ? `grid--${columns}` : ''} ${gapClassName ? `grid--${gapClassName}` : ''}`}
     >
       {children?.map((child, index) => (
         <li
-          className="grid__item"
+          className={`grid__item ${actionClassName && index === 0 ? `grid--${actionClassName}` : ''}`}
           key={index}
         >{child}</li>
       ))}
-    </div>
+    </ul>
   )
 }
 

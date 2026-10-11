@@ -43,7 +43,7 @@ const Projects = () => {
   return (
     <Section
       title="Мои работы"
-      stepTitle="03 &bull; ПРОЕКТЫ"
+      stepTitle="03 &bull; Проекты"
       actionButton
     >
       <Grid gapClassName="projects-gap">

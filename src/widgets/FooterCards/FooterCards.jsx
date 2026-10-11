@@ -1,0 +1,84 @@
+import {menuItems} from "@/shared/utils/menuItems";
+import Grid from "@/shared/ui/Grid";
+import './FooterCards.scss'
+import ContactCard from "@/shared/ui/ContactCard";
+
+const FooterCards = () => {
+
+  const cardItems = [
+    {
+      subtitle: 'Telegram',
+      title: '@josodo2xx',
+      linkType: 'telegram',
+      isAccent: true,
+    },
+    {
+      secondColumn: [
+        {
+          subtitle: 'Почта',
+          title: 'nikitakarpov-2002@yandex.ru',
+          linkType: 'email',
+        },
+        {
+          subtitle: 'Резюме',
+          title: 'Download',
+          linkType: 'document',
+        },
+        {
+          subtitle: 'GitHub',
+          title: 'josodo2xx',
+          linkType: 'github',
+        },
+      ],
+    },
+  ]
+
+  return (
+    <div className="footer-cards">
+      <div className="footer-cards__wrapper container">
+        <header className="footer-cards__header">
+          <div className="footer-cards__connection">Способы связи</div>
+          <h2 className="footer-cards__title h1">Контакты</h2>
+          <div className="footer-cards__description">Работаю с React. Открыт
+            к офису в Самаре и к удалёнке.
+          </div>
+          <Grid>
+            {cardItems.map((cardItem) => {
+                if (cardItem.secondColumn !== undefined) {
+                  return (
+                    <Grid actionClassName='first-item-wide'>
+                      {cardItem.secondColumn.map((item) => (
+                        <ContactCard {...item} key={item.linkType} />
+                      ))}
+                    </Grid>
+                  )
+                } else {
+                  return <ContactCard {...cardItem} key={cardItem.linkType} />
+                }
+              }
+            )}
+          </Grid>
+        </header>
+        <div className="footer-cards__bottom">
+          <nav className="footer-cards__menu">
+            <ul className="footer-cards__list">
+              {menuItems.map(({label, href}) => (
+                <li className="footer-cards__item" key={label}>
+                  <a
+                    className="footer-cards__link"
+                    href={href}
+                  >{label}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="footer-cards__extra">&copy; 2026 Карпов Никита Николаевич
+            &bull; Самара
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default FooterCards

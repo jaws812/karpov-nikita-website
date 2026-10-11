@@ -1,9 +1,7 @@
 import './Hero.scss'
 import Button from "@/shared/ui/Button";
 
-const Hero = (props) => {
-  const {} = props
-
+const Hero = () => {
   const toolsItems = ["React", "Git & GitHub", "Figma", "Web Storm"]
 
   return (

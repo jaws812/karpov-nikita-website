@@ -48,7 +48,7 @@ const Stack = () => {
       ],
     },
     {
-      title: 'Бэкэнд и CMS',
+      title: 'Бэкенд и CMS',
       property: [
         {
           title: 'PHP',
@@ -89,7 +89,6 @@ const Stack = () => {
         },
       ],
     },
-
   ]
 
   return (
