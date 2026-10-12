@@ -1,5 +1,6 @@
 import './Hero.scss'
 import Button from "@/shared/ui/Button";
+import HoverGlowButton from "@/shared/ui/HoverGlowButton";
 
 const Hero = () => {
   const toolsItems = ["React", "Git & GitHub", "Figma", "Web Storm"]
@@ -9,7 +10,7 @@ const Hero = () => {
       <div className="container">
         <div className="hero">
           <h1 className="hero__title">
-            Карпов Никита <span className="hero__title--accent">веб-разработчик</span> и верстальщик
+            Карпов Никита <span className="hero__title--accent">frontend-разработчик</span> и&nbsp;верстальщик
           </h1>
           <div className="hero__description">
             Верстаю корпоративные сайты и лендинги по современным стандартам,
@@ -28,7 +29,7 @@ const Hero = () => {
             >
               Резюме
             </Button>
-            <Button
+            <HoverGlowButton
               className="hero__actions-button"
               href='https://github.com/jaws812'
               target="_blank"
@@ -74,7 +75,7 @@ const Hero = () => {
                   />
                 </g>
               </svg>
-            </Button>
+            </HoverGlowButton>
           </div>
           <div className="hero__tools">
             <ul className="hero__tools-list">

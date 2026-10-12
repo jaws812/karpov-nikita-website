@@ -1,10 +1,7 @@
 import './FooterCenter.scss'
 
-const FooterCenter = (props) => {
-  const {
-    
-  } = props
-  
+const FooterCenter = () => {
+
   return (
     <div className="footer-center">
       FooterCenter

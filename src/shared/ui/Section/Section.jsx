@@ -1,5 +1,5 @@
 import './Section.scss'
-import Button from "@/shared/ui/Button";
+import HoverGlowButton from "@/shared/ui/HoverGlowButton";
 
 const Section = (props) => {
   const {
@@ -16,7 +16,7 @@ const Section = (props) => {
           <div className="section__step">{stepTitle}</div>
           <h2 className="section__title">{title}</h2>
           {actionButton && (
-            <Button
+            <HoverGlowButton
               className="section__button"
               href='https://github.com/jaws812'
               target="_blank"
@@ -62,7 +62,7 @@ const Section = (props) => {
                   />
                 </g>
               </svg>
-            </Button>
+            </HoverGlowButton>
           )}
         </div>
         <div className="section__body">
