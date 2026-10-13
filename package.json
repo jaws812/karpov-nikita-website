@@ -16,7 +16,6 @@
     "lint:fix": "npm run lint:js:fix ; npm run lint:scss:fix ; npm run format"
   },
   "dependencies": {
-    "-": "^0.0.1-security.1",
     "react": "^19.2.8",
     "react-dom": "^19.2.8"
   },
