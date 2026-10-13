@@ -1,10 +1,9 @@
 import './Hero.scss'
 import Button from '@/shared/ui/Button'
 import HoverGlowButton from '@/shared/ui/HoverGlowButton'
+import { toolsItems } from '@/pages/MainPage/model/dataItems'
 
 const Hero = () => {
-  const toolsItems = ['React', 'Git & GitHub', 'Figma', 'Web Storm']
-
   return (
     <section className='section'>
       <div className='container'>

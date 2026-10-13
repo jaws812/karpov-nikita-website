@@ -1,37 +1,10 @@
 import Button from '@/shared/ui/Button'
 import Logo from '@/shared/ui/Logo'
 import BurgerButton from '@/shared/ui/BurgerButton'
-import { menuItems } from '@/shared/utils/menuItems'
+import { dataItems } from '@/pages/MainPage/model/dataItems'
 import './Header.scss'
 
 const Header = () => {
-  // const menuItems = [
-  //   {
-  //     label: 'Обо мне',
-  //     href: '#',
-  //   },
-  //   {
-  //     label: 'Стек',
-  //     href: '#',
-  //   },
-  //   {
-  //     label: 'Стек',
-  //     href: '#',
-  //   },
-  //   {
-  //     label: 'Путь',
-  //     href: '#',
-  //   },
-  //   {
-  //     label: 'Как я работаю',
-  //     href: '#',
-  //   },
-  //   {
-  //     label: 'Контакты',
-  //     href: '#',
-  //   },
-  // ]
-
   const onClick = (event) => {
     const overlayMenu = document.querySelector('[data-js-overlay-menu-dialog]')
 
@@ -53,8 +26,8 @@ const Header = () => {
         >
           <nav className='header__menu'>
             <ul className='header__menu-list'>
-              {menuItems.map(({ label, href }) => (
-                <li className='header__menu-item' key={label}>
+              {dataItems.map(({ idHeader, label, href }) => (
+                <li className='header__menu-item' key={idHeader}>
                   <a className='header__menu-link' href={href}>
                     {label}
                   </a>

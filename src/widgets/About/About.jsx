@@ -1,49 +1,9 @@
 import './About.scss'
 import './Metric.scss'
 import Section from '@/shared/ui/Section'
+import { infoItems, metricItems } from '@/pages/MainPage/model/dataItems'
 
 const About = () => {
-  const infoItems = [
-    {
-      title: 'Город',
-      description: 'Россия, Самара',
-    },
-    {
-      title: 'Формат',
-      description: 'офис / удалённо',
-    },
-    {
-      title: 'Образование',
-      description: 'ПГУТИ, 2024',
-    },
-    {
-      title: 'Сейчас',
-      description: 'Фронтенд-разработчик сайтов на CMS',
-    },
-    {
-      title: 'Учу',
-      description: 'React, TypeScript',
-    },
-  ]
-
-  const metricItems = [
-    {
-      title: '1+',
-      subtitle: 'год',
-      description: 'разработки сайтов на CMS и вёрстки',
-    },
-    {
-      title: '50+',
-      subtitle: 'проектов',
-      description: 'лендинги, сайты услуг, правки на живых проектах',
-    },
-    {
-      title: '2024',
-      subtitle: 'ПГУТИ',
-      description: 'бакалавр, информатика и вычислительная техника',
-    },
-  ]
-
   return (
     <Section
       stepTitle='01 &bull; Обо мне'

@@ -1,37 +1,9 @@
-import { menuItems } from '@/shared/utils/menuItems'
+import { dataItems, cardItems } from '@/pages/MainPage/model/dataItems'
 import Grid from '@/shared/ui/Grid'
 import ContactCard from '@/shared/ui/ContactCard'
 import './FooterCards.scss'
 
 const FooterCards = () => {
-  const cardItems = [
-    {
-      subtitle: 'Telegram',
-      title: '@josodo2xx',
-      linkType: 'telegram',
-      isAccent: true,
-    },
-    {
-      secondColumn: [
-        {
-          subtitle: 'Почта',
-          title: 'nikitakarpov-2002@yandex.ru',
-          linkType: 'email',
-        },
-        {
-          subtitle: 'Резюме',
-          title: 'Download',
-          linkType: 'document',
-        },
-        {
-          subtitle: 'GitHub',
-          title: 'josodo2xx',
-          linkType: 'github',
-        },
-      ],
-    },
-  ]
-
   return (
     <div className='footer-cards'>
       <div className='footer-cards__wrapper container'>
@@ -59,8 +31,8 @@ const FooterCards = () => {
         <div className='footer-cards__bottom'>
           <nav className='footer-cards__menu'>
             <ul className='footer-cards__list'>
-              {menuItems.map(({ label, href }) => (
-                <li className='footer-cards__item' key={label}>
+              {dataItems.map(({ idFooter, label, href }) => (
+                <li className='footer-cards__item' key={idFooter}>
                   <a className='footer-cards__link' href={href}>
                     {label}
                   </a>

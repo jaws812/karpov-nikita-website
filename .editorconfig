@@ -1,0 +1,28 @@
+# https://editorconfig.org
+# Корневой файл — поиск .editorconfig в родительских папках прекращается
+root = true
+
+# Настройки по умолчанию для всех файлов
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Файлы, где пробелы в конце строк значимы
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{yml,yaml}]
+indent_size = 2
+
+[*.{scss,css}]
+indent_size = 2
+
+[*.{js,jsx,ts,tsx,json,html}]
+indent_size = 2
+
+[*.svg]
+indent_size = 2
