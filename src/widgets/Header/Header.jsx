@@ -26,8 +26,8 @@ const Header = () => {
         >
           <nav className='header__menu'>
             <ul className='header__menu-list'>
-              {dataItems.map(({ idHeader, label, href }) => (
-                <li className='header__menu-item' key={idHeader}>
+              {dataItems.map(({ label, href }) => (
+                <li className='header__menu-item' key={href}>
                   <a className='header__menu-link' href={href}>
                     {label}
                   </a>

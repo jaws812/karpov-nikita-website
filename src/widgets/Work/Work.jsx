@@ -1,6 +1,6 @@
 import Section from '@/shared/ui/Section'
 import Grid from '@/shared/ui/Grid'
-import WorkCard from '@/shared/ui/WorkCard/WorkCard'
+import WorkCard from '@/shared/ui/WorkCard'
 import { workSteps } from '@/pages/MainPage/model/dataItems'
 
 const Work = () => {

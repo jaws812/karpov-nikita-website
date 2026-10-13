@@ -1,5 +1,5 @@
 import Section from '@/shared/ui/Section'
-import StackCard from '@/shared/ui/StackCard'
+import StackCard from '@/entities/stack'
 import Grid from '@/shared/ui/Grid'
 import { stackItems } from '@/pages/MainPage/model/dataItems'
 

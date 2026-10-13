@@ -1,5 +1,5 @@
 import Section from '@/shared/ui/Section'
-import ProjectCard from '@/shared/ui/ProjectCard'
+import ProjectCard from '@/entities/projects'
 import Grid from '@/shared/ui/Grid'
 import { projectItems } from '@/pages/MainPage/model/dataItems'
 

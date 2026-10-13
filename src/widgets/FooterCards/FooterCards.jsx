@@ -31,8 +31,8 @@ const FooterCards = () => {
         <div className='footer-cards__bottom'>
           <nav className='footer-cards__menu'>
             <ul className='footer-cards__list'>
-              {dataItems.map(({ idFooter, label, href }) => (
-                <li className='footer-cards__item' key={idFooter}>
+              {dataItems.map(({ label, href }) => (
+                <li className='footer-cards__item' key={href}>
                   <a className='footer-cards__link' href={href}>
                     {label}
                   </a>

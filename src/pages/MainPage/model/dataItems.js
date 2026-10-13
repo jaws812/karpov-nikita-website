@@ -1,39 +1,27 @@
 export const dataItems = [
   {
-    idHeader: '1h',
-    idFooter: '1f',
     label: 'Обо мне',
-    href: '#',
+    href: '/about-me',
   },
   {
-    idHeader: '2h',
-    idFooter: '2f',
     label: 'Стек',
-    href: '#',
+    href: '/stack',
   },
   {
-    idHeader: '3h',
-    idFooter: '3f',
-    label: 'Стек',
-    href: '#',
+    label: 'Проекты',
+    href: '/projects',
   },
   {
-    idHeader: '4h',
-    idFooter: '4f',
     label: 'Путь',
-    href: '#',
+    href: '/way',
   },
   {
-    idHeader: '5h',
-    idFooter: '5f',
     label: 'Как я работаю',
-    href: '#',
+    href: '/work',
   },
   {
-    idHeader: '6h',
-    idFooter: '6f',
     label: 'Контакты',
-    href: '#',
+    href: '/contacts',
   },
 ]
 
