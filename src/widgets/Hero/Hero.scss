@@ -86,6 +86,7 @@
 
     &-item {
       @include fluid-text(16, 14);
+
       padding: fluid(11, 9) fluid(21, 17);
       border: var(--border);
       border-radius: var(--border-radius-md);

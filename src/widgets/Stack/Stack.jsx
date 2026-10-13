@@ -1,4 +1,3 @@
-import './Stack.scss'
 import Section from '@/shared/ui/Section'
 import StackCard from '@/shared/ui/StackCard'
 import Grid from '@/shared/ui/Grid'

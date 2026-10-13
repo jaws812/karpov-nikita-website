@@ -81,7 +81,7 @@
 
   &__logo {
     @include mobile-s {
-      @include visually-hidden();
+      @include visually-hidden;
     }
   }
 

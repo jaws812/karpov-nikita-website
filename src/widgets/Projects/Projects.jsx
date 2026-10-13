@@ -1,4 +1,3 @@
-import './Projects.scss'
 import Section from '@/shared/ui/Section'
 import ProjectCard from '@/shared/ui/ProjectCard'
 import Grid from '@/shared/ui/Grid'

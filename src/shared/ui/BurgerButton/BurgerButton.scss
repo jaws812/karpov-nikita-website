@@ -2,7 +2,9 @@
   position: relative;
   width: 50px;
   height: 50px;
+
   @include flex-center(false);
+
   flex-direction: column;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -40,7 +42,7 @@
   border-radius: 50%;
 }
 
-.burger-button:before {
+.burger-button::before {
   content: '';
   position: absolute;
   -webkit-box-sizing: border-box;
@@ -57,7 +59,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.burger-button.is-active:before {
+.burger-button.is-active::before {
   border: 3px solid var(--color-light);
 }
 

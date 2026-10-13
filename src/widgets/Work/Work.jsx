@@ -1,4 +1,3 @@
-import './Work.scss'
 import Section from '@/shared/ui/Section'
 import Grid from '@/shared/ui/Grid'
 import WorkCard from '@/shared/ui/WorkCard/WorkCard'
