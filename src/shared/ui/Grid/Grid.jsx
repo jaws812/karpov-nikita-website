@@ -1,12 +1,7 @@
 import './Grid.scss'
 
 const Grid = (props) => {
-  const {
-    children,
-    columns = 2,
-    gapClassName,
-    actionClassName,
-  } = props
+  const { children, columns = 2, gapClassName, actionClassName } = props
 
   return (
     <ul
@@ -16,7 +11,9 @@ const Grid = (props) => {
         <li
           className={`grid__item ${actionClassName && index === 0 ? `grid--${actionClassName}` : ''}`}
           key={index}
-        >{child}</li>
+        >
+          {child}
+        </li>
       ))}
     </ul>
   )

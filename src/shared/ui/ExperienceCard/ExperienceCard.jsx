@@ -1,12 +1,7 @@
 import './ExperienceCard.scss'
 
 const ExperienceCard = (props) => {
-  const {
-    timeline,
-    title,
-    organization,
-    description,
-  } = props
+  const { timeline, title, organization, description } = props
 
   return (
     <div className="experience-card">

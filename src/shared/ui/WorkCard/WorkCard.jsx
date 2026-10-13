@@ -1,11 +1,7 @@
 import './WorkCard.scss'
 
 const WorkCard = (props) => {
-  const {
-    counter,
-    title,
-    description,
-  } = props
+  const { counter, title, description } = props
 
   return (
     <div className="work-card">

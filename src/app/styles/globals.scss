@@ -36,27 +36,33 @@ main {
   padding-block: fluid(128, 64);
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
   color: var(--color-light);
   font-family: var(--font-family-manrope), sans-serif;
   font-weight: 700;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   @include fluid-text(96, 44);
   line-height: 1;
   letter-spacing: -2.9px;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   @include fluid-text(60, 30);
   line-height: 1;
   letter-spacing: -1.8px;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   @include fluid-text(24, 20);
   line-height: 1;
 }

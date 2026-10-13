@@ -1,13 +1,8 @@
 import './Section.scss'
-import HoverGlowButton from "@/shared/ui/HoverGlowButton";
+import HoverGlowButton from '@/shared/ui/HoverGlowButton'
 
 const Section = (props) => {
-  const {
-    children,
-    title,
-    stepTitle,
-    actionButton,
-  } = props
+  const { children, title, stepTitle, actionButton } = props
 
   return (
     <section className="section">
@@ -18,7 +13,7 @@ const Section = (props) => {
           {actionButton && (
             <HoverGlowButton
               className="section__button"
-              href='https://github.com/jaws812'
+              href="https://github.com/jaws812"
               target="_blank"
             >
               <div>Все репозитории на GitHub</div>
@@ -33,9 +28,9 @@ const Section = (props) => {
                   <path
                     style={{
                       fill: 'none',
-                      'stroke': 'currentColor',
+                      stroke: 'currentColor',
                       strokeWidth: '2',
-                      strokeMiterlimit: '10'
+                      strokeMiterlimit: '10',
                     }}
                     d="M20,12v7c0,0.552-0.448,1-1,1H5c-0.552,0-1-0.448-1-1V5c0-0.552,0.448-1,1-1h7"
                   />
@@ -44,7 +39,7 @@ const Section = (props) => {
                       fill: 'none',
                       stroke: 'currentColor',
                       strokeWidth: '2',
-                      strokeMiterlimit: '10'
+                      strokeMiterlimit: '10',
                     }}
                     points="20,10 20,4 14,4 "
                   />
@@ -53,7 +48,7 @@ const Section = (props) => {
                       fill: 'none',
                       stroke: 'currentColor',
                       strokeWidth: '2',
-                      strokeMiterlimit: '10'
+                      strokeMiterlimit: '10',
                     }}
                     x1="20"
                     y1="4"
@@ -65,9 +60,7 @@ const Section = (props) => {
             </HoverGlowButton>
           )}
         </div>
-        <div className="section__body">
-          {children}
-        </div>
+        <div className="section__body">{children}</div>
       </div>
     </section>
   )

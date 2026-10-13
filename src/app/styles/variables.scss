@@ -1,22 +1,22 @@
 :root {
-  --color-white: #FFF;
+  --color-white: #fff;
   --color-black: #000;
 
-  --color-light: #F4F6F4;
-  --color-gray: #99A19B;
+  --color-light: #f4f6f4;
+  --color-gray: #99a19b;
 
-  --color-dark: #0B0D0C;
+  --color-dark: #0b0d0c;
   --color-dark-2: #111411;
   --color-dark-3: #131613;
-  --color-dark-4: #191D1A;
-  --color-dark-5: #171B18;
-  --color-dark-6: #272D29;
-  --color-dark-7: #1C211E;
+  --color-dark-4: #191d1a;
+  --color-dark-5: #171b18;
+  --color-dark-6: #272d29;
+  --color-dark-7: #1c211e;
 
-  --color-green-1: #6FBF8F;
-  --color-green-2: #75CD98;
-  --color-green-3: #2B533B;
-  --color-green-4: #0A140E;
+  --color-green-1: #6fbf8f;
+  --color-green-2: #75cd98;
+  --color-green-3: #2b533b;
+  --color-green-4: #0a140e;
 
   --border: 1px solid var(--color-dark-6);
   --border-green: 1px solid var(--color-green-1);
@@ -26,14 +26,14 @@
   --border-radius-top: 48px 48px 0 0;
   --box-shadow: 6px 6px 0px 0px var(--color-green-3);
 
-  --font-family-manrope: "Manrope";
-  --font-family-grotesk: "Space Grotesk";
-  --font-family-mono: "JetBrains Mono";
+  --font-family-manrope: 'Manrope';
+  --font-family-grotesk: 'Space Grotesk';
+  --font-family-mono: 'JetBrains Mono';
 
   --container-width: #{fluid-to-laptop(
-    $container-desktop-width,
-    $container-laptop-width
-  )};
+      $container-desktop-width,
+      $container-laptop-width
+    )};
   --container-padding-x: 20px;
 
   --section-padding-y: #{fluid(128, 64)};

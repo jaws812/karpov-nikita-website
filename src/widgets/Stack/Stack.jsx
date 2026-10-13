@@ -1,7 +1,7 @@
 import './Stack.scss'
-import Section from "@/shared/ui/Section";
-import StackCard from "@/shared/ui/StackCard";
-import Grid from "@/shared/ui/Grid";
+import Section from '@/shared/ui/Section'
+import StackCard from '@/shared/ui/StackCard'
+import Grid from '@/shared/ui/Grid'
 
 const Stack = () => {
   const stackItems = [
@@ -10,19 +10,19 @@ const Stack = () => {
       property: [
         {
           title: 'HTML5',
-          description: 'семантика'
+          description: 'семантика',
         },
         {
           title: 'CSS3',
-          description: 'grid, flex'
+          description: 'grid, flex',
         },
         {
           title: 'SCSS',
-          description: 'БЭМ, миксины'
+          description: 'БЭМ, миксины',
         },
         {
           title: 'Bootstrap',
-          description: 'сетка, компоненты'
+          description: 'сетка, компоненты',
         },
       ],
     },
@@ -31,19 +31,19 @@ const Stack = () => {
       property: [
         {
           title: 'JavaScript',
-          description: 'ES6+'
+          description: 'ES6+',
         },
         {
           title: 'jQuery',
-          description: 'ускорение и упрощение скриптов'
+          description: 'ускорение и упрощение скриптов',
         },
         {
           title: 'Библиотеки',
-          description: 'Swiper, Slick'
+          description: 'Swiper, Slick',
         },
         {
           title: 'React',
-          description: 'в процессе'
+          description: 'в процессе',
         },
       ],
     },
@@ -52,19 +52,19 @@ const Stack = () => {
       property: [
         {
           title: 'PHP',
-          description: 'базово'
+          description: 'базово',
         },
         {
           title: 'phpMyAdmin',
-          description: 'базы данных'
+          description: 'базы данных',
         },
         {
           title: 'CMS',
-          description: 'верстка и натягивание сайтов на CMS'
+          description: 'верстка и натягивание сайтов на CMS',
         },
         {
           title: 'Хостинг',
-          description: 'домены, управление DNS, VDS'
+          description: 'домены, управление DNS, VDS',
         },
       ],
     },
@@ -73,19 +73,19 @@ const Stack = () => {
       property: [
         {
           title: 'Git',
-          description: 'коммиты, ветки'
+          description: 'коммиты, ветки',
         },
         {
           title: 'Vite, Minista',
-          description: 'сборка'
+          description: 'сборка',
         },
         {
           title: 'Figma',
-          description: 'работа с макетом'
+          description: 'работа с макетом',
         },
         {
           title: 'DevTools | React DevTools',
-          description: 'отладка'
+          description: 'отладка',
         },
       ],
     },

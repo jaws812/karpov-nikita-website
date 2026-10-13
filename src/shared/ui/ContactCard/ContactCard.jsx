@@ -1,12 +1,7 @@
 import './ContactCard.scss'
 
 const ContactCard = (props) => {
-  const {
-    subtitle,
-    title,
-    linkType,
-    isAccent,
-  } = props
+  const { subtitle, title, linkType, isAccent } = props
 
   const dataLinks = [
     {
@@ -78,32 +73,27 @@ const ContactCard = (props) => {
       </header>
       <div className="contact-card__bottom">
         <div className="contact-card__subtitle">{subtitle}</div>
-        <h3 className="contact-card__title">
-          {title}
-        </h3>
-        {isAccent && <div className="contact-card__extra">
-          Написать в Telegram
-          <svg
-            className="contact-card__extra-icon"
-            width="25"
-            height="25"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            stroke="#000000"
-            strokeWidth="1"
-            strokeLinecap="round"
-            strokeLinejoin="miter"
-          >
-            <polyline points="13 17 18 12 13 7"></polyline>
-            <line
-              x1="6"
-              y1="12"
-              x2="18"
-              y2="12"
-            ></line>
-          </svg>
-        </div>}
+        <h3 className="contact-card__title">{title}</h3>
+        {isAccent && (
+          <div className="contact-card__extra">
+            Написать в Telegram
+            <svg
+              className="contact-card__extra-icon"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              stroke="#000000"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="miter"
+            >
+              <polyline points="13 17 18 12 13 7"></polyline>
+              <line x1="6" y1="12" x2="18" y2="12"></line>
+            </svg>
+          </div>
+        )}
       </div>
     </a>
   )

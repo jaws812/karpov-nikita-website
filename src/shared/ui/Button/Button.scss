@@ -9,7 +9,7 @@
   font-weight: 700;
   padding: 16px 55px;
 
-  @include hover{
+  @include hover {
     color: var(--color-green-4);
     background-color: var(--color-green-1);
   }

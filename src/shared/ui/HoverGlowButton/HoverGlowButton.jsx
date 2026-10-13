@@ -20,9 +20,7 @@ const HoverGlowButton = (props) => {
 
   const isLink = href !== undefined
   const Component = isLink ? 'a' : 'button'
-  const specificProps = isLink
-    ? { href, target }
-    : { type, disabled }
+  const specificProps = isLink ? { href, target } : { type, disabled }
 
   const ref = useRef(null)
   const [pos, setPos] = useState({ x: 0, y: 0 })
@@ -30,7 +28,9 @@ const HoverGlowButton = (props) => {
 
   const handleMouseMove = (e) => {
     const el = ref.current
-    if (!el) return
+    if (!el) {
+      return
+    }
     const rect = el.getBoundingClientRect()
     setPos({
       x: e.clientX - rect.left,

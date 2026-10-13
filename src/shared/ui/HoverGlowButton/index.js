@@ -1,1 +1,1 @@
-export {default} from './HoverGlowButton'
+export { default } from './HoverGlowButton'

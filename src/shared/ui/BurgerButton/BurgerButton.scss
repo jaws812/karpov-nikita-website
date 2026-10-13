@@ -1,4 +1,4 @@
-.burger-button{
+.burger-button {
   position: relative;
   width: 50px;
   height: 50px;
@@ -12,16 +12,16 @@
   border-radius: var(--border-radius-sm);
   cursor: pointer;
 
-  @include hover{
+  @include hover {
     background-color: var(--color-dark-6);
   }
 
-  @include laptop-above{
+  @include laptop-above {
     @include visually-hidden;
   }
 }
 
-.burger-button .line{
+.burger-button .line {
   width: 25px;
   height: 2px;
   background-color: var(--color-light);
@@ -32,7 +32,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.burger-button.is-active{
+.burger-button.is-active {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -40,8 +40,8 @@
   border-radius: 50%;
 }
 
-.burger-button:before{
-  content: "";
+.burger-button:before {
+  content: '';
   position: absolute;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -57,26 +57,26 @@
   transition: all 0.3s ease-in-out;
 }
 
-.burger-button.is-active:before{
+.burger-button.is-active:before {
   border: 3px solid var(--color-light);
 }
 
-.burger-button.is-active .line{
+.burger-button.is-active .line {
   width: 25px;
 }
 
-.burger-button.is-active .line:nth-child(2){
+.burger-button.is-active .line:nth-child(2) {
   opacity: 0;
 }
 
-.burger-button.is-active .line:nth-child(1){
+.burger-button.is-active .line:nth-child(1) {
   -webkit-transform: translateY(8px);
   -ms-transform: translateY(8px);
   -o-transform: translateY(8px);
   transform: translateY(8px);
 }
 
-.burger-button.is-active .line:nth-child(3){
+.burger-button.is-active .line:nth-child(3) {
   -webkit-transform: translateY(-8px) rotate(90deg);
   -ms-transform: translateY(-8px) rotate(90deg);
   -o-transform: translateY(-8px) rotate(90deg);

@@ -1,12 +1,9 @@
 import './BurgerButton.scss'
 
 const BurgerButton = (props) => {
-  const {
-    className,
-    onClick,
-  } = props
+  const { className, onClick } = props
 
-  const title = "Открыть меню"
+  const title = 'Открыть меню'
 
   return (
     <button

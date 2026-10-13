@@ -1,1 +1,1 @@
-export {default} from './StackCard'
+export { default } from './StackCard'

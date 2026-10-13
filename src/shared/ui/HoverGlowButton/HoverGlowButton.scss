@@ -40,11 +40,7 @@
     pointer-events: none;
     opacity: 0.5;
 
-    background: radial-gradient(
-      circle,
-      var(--glow-color) 10%,
-      transparent 70%
-    );
+    background: radial-gradient(circle, var(--glow-color) 10%, transparent 70%);
 
     transform: translate(-50%, -50%) scale(0);
     transition: transform 0.4s ease-out;

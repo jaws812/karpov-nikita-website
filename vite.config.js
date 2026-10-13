@@ -1,20 +1,20 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
-import path from 'path'
+import { fileURLToPath, URL } from 'node:url'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@' : path.resolve(__dirname, 'src'),
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "@/app/styles/helpers" as *;`
-      }
+        additionalData: `@use "@/app/styles/helpers" as *;`,
+      },
     },
-  }
+  },
 })

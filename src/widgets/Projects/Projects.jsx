@@ -1,8 +1,7 @@
 import './Projects.scss'
-import Section from "@/shared/ui/Section";
-import ProjectCard from "@/shared/ui/ProjectCard";
-import Grid from "@/shared/ui/Grid";
-
+import Section from '@/shared/ui/Section'
+import ProjectCard from '@/shared/ui/ProjectCard'
+import Grid from '@/shared/ui/Grid'
 
 const Projects = () => {
   const projectItems = [
@@ -41,17 +40,10 @@ const Projects = () => {
   ]
 
   return (
-    <Section
-      title="Мои работы"
-      stepTitle="03 &bull; Проекты"
-      actionButton
-    >
+    <Section title="Мои работы" stepTitle="03 &bull; Проекты" actionButton>
       <Grid gapClassName="projects-gap">
         {projectItems.map((item) => (
-          <ProjectCard
-            {...item}
-            key={item.count}
-          />
+          <ProjectCard {...item} key={item.count} />
         ))}
       </Grid>
     </Section>

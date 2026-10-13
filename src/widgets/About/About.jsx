@@ -1,29 +1,28 @@
 import './About.scss'
 import './Metric.scss'
-import Section from "@/shared/ui/Section";
+import Section from '@/shared/ui/Section'
 
 const About = () => {
-
   const infoItems = [
     {
-      title: "Город",
-      description: "Россия, Самара",
+      title: 'Город',
+      description: 'Россия, Самара',
     },
     {
-      title: "Формат",
-      description: "офис / удалённо",
+      title: 'Формат',
+      description: 'офис / удалённо',
     },
     {
-      title: "Образование",
-      description: "ПГУТИ, 2024",
+      title: 'Образование',
+      description: 'ПГУТИ, 2024',
     },
     {
-      title: "Сейчас",
-      description: "Фронтенд-разработчик сайтов на CMS",
+      title: 'Сейчас',
+      description: 'Фронтенд-разработчик сайтов на CMS',
     },
     {
-      title: "Учу",
-      description: "React, TypeScript",
+      title: 'Учу',
+      description: 'React, TypeScript',
     },
   ]
 
@@ -53,22 +52,23 @@ const About = () => {
       <div className="about">
         <div className="about__info">
           <div className="about__description">
-            <p>Закончил ПГУТИ в Самаре — направление «Информатика и
-              вычислительная техника». Год с лишним работаю в веб-студии: разработка
-              новых сайтов, правки на живых проектах, хостинг и поддержка клиентов.
+            <p>
+              Закончил ПГУТИ в Самаре — направление «Информатика и
+              вычислительная техника». Год с лишним работаю в веб-студии:
+              разработка новых сайтов, правки на живых проектах, хостинг и
+              поддержка клиентов.
             </p>
-            <p>Работаю без тяжёлых фреймворков — HTML, CSS/SCSS(Bootstrap), JavaScript, БЭМ
-              и js-библиотеки вроде jQuery и Slick Slider. Есть опыт с PHP и
-              базами данных. Сейчас активно изуючаю разработку сайтов на React.
+            <p>
+              Работаю без тяжёлых фреймворков — HTML, CSS/SCSS(Bootstrap),
+              JavaScript, БЭМ и js-библиотеки вроде jQuery и Slick Slider. Есть
+              опыт с PHP и базами данных. Сейчас активно изуючаю разработку
+              сайтов на React.
             </p>
           </div>
           <div className="about__badge">
             <ul className="about__list">
-              {infoItems.map(({title, description}) => (
-                <li
-                  className="about__item"
-                  key={title}
-                >
+              {infoItems.map(({ title, description }) => (
+                <li className="about__item" key={title}>
                   <div className="about__item-title">{title}</div>
                   <div className="about__item-description">{description}</div>
                 </li>
@@ -78,13 +78,12 @@ const About = () => {
         </div>
         <div className="about__metric metric">
           <dl className="metric__list">
-            {metricItems.map(({title, subtitle, description}) => (
-              <div
-                className="metric__item"
-                key={title}
-              >
+            {metricItems.map(({ title, subtitle, description }) => (
+              <div className="metric__item" key={title}>
                 <dt className="metric__term">{description}</dt>
-                <dt className="metric__value metric__value--subtitle">{subtitle}</dt>
+                <dt className="metric__value metric__value--subtitle">
+                  {subtitle}
+                </dt>
                 <dd className="metric__value">{title}</dd>
               </div>
             ))}

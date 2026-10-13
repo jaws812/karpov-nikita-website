@@ -1,37 +1,41 @@
 import './Hero.scss'
-import Button from "@/shared/ui/Button";
-import HoverGlowButton from "@/shared/ui/HoverGlowButton";
+import Button from '@/shared/ui/Button'
+import HoverGlowButton from '@/shared/ui/HoverGlowButton'
 
 const Hero = () => {
-  const toolsItems = ["React", "Git & GitHub", "Figma", "Web Storm"]
+  const toolsItems = ['React', 'Git & GitHub', 'Figma', 'Web Storm']
 
   return (
     <section className="section">
       <div className="container">
         <div className="hero">
           <h1 className="hero__title">
-            Карпов Никита <span className="hero__title--accent">frontend-разработчик</span> и&nbsp;верстальщик
+            Карпов Никита{' '}
+            <span className="hero__title--accent">frontend-разработчик</span>{' '}
+            и&nbsp;верстальщик
           </h1>
           <div className="hero__description">
             Верстаю корпоративные сайты и лендинги по современным стандартам,
-            работаю с разными CMS и понимаю, как сайт устроен целиком: хостинг, домен,
-            PHP и база данных.
+            работаю с разными CMS и понимаю, как сайт устроен целиком: хостинг,
+            домен, PHP и база данных.
           </div>
           <div className="hero__subtitle">
             Изучаю React и имею опыт работы с разработкой коммерческих сайтов.
           </div>
-          <div className="hero__location">Россия, Самара &bull; офис или удалённо</div>
+          <div className="hero__location">
+            Россия, Самара &bull; офис или удалённо
+          </div>
           <div className="hero__actions">
             <Button
               className="hero__actions-button hero__actions-button--accent"
               isWide
-              href='#'
+              href="#"
             >
               Резюме
             </Button>
             <HoverGlowButton
               className="hero__actions-button"
-              href='https://github.com/jaws812'
+              href="https://github.com/jaws812"
               target="_blank"
             >
               <div>GitHub</div>
@@ -46,9 +50,9 @@ const Hero = () => {
                   <path
                     style={{
                       fill: 'none',
-                      'stroke': 'currentColor',
+                      stroke: 'currentColor',
                       strokeWidth: '2',
-                      strokeMiterlimit: '10'
+                      strokeMiterlimit: '10',
                     }}
                     d="M20,12v7c0,0.552-0.448,1-1,1H5c-0.552,0-1-0.448-1-1V5c0-0.552,0.448-1,1-1h7"
                   />
@@ -57,7 +61,7 @@ const Hero = () => {
                       fill: 'none',
                       stroke: 'currentColor',
                       strokeWidth: '2',
-                      strokeMiterlimit: '10'
+                      strokeMiterlimit: '10',
                     }}
                     points="20,10 20,4 14,4 "
                   />
@@ -66,7 +70,7 @@ const Hero = () => {
                       fill: 'none',
                       stroke: 'currentColor',
                       strokeWidth: '2',
-                      strokeMiterlimit: '10'
+                      strokeMiterlimit: '10',
                     }}
                     x1="20"
                     y1="4"
@@ -80,10 +84,9 @@ const Hero = () => {
           <div className="hero__tools">
             <ul className="hero__tools-list">
               {toolsItems.map((name) => (
-                <li
-                  className="hero__tools-item"
-                  key={name}
-                >{name}</li>
+                <li className="hero__tools-item" key={name}>
+                  {name}
+                </li>
               ))}
             </ul>
           </div>

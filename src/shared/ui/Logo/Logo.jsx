@@ -1,9 +1,7 @@
 import './Logo.scss'
 
 const Logo = (props) => {
-  const {
-    className = '',
-  } = props
+  const { className = '' } = props
   const title = 'Главная страница'
 
   return (

@@ -1,1 +1,1 @@
-export {default} from './FooterCards'
+export { default } from './FooterCards'
