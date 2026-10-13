@@ -4,7 +4,7 @@ import FooterCards from '@/widgets/FooterCards'
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className='footer'>
       {/*<FooterCenter />*/}
       <FooterCards />
     </footer>

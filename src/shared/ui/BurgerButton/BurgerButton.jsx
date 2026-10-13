@@ -8,14 +8,14 @@ const BurgerButton = (props) => {
   return (
     <button
       className={`${className} burger-button`}
-      type="button"
+      type='button'
       aria-label={title}
       title={title}
       onClick={onClick}
     >
-      <span className="line"></span>
-      <span className="line"></span>
-      <span className="line"></span>
+      <span className='line'></span>
+      <span className='line'></span>
+      <span className='line'></span>
     </button>
   )
 }

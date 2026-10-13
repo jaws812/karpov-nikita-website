@@ -70,8 +70,8 @@ const HoverGlowButton = (props) => {
       {...specificProps}
       {...rest}
     >
-      <span className="hover-glow-button__glow" aria-hidden="true" />
-      <span className="hover-glow-button__content">{children}</span>
+      <span className='hover-glow-button__glow' aria-hidden='true' />
+      <span className='hover-glow-button__content'>{children}</span>
     </Component>
   )
 }

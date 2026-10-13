@@ -92,8 +92,8 @@ const Stack = () => {
 
   return (
     <Section
-      title="Инструменты, которыми пользуюсь каждый день"
-      stepTitle="02 &bull; СТЕК"
+      title='Инструменты, которыми пользуюсь каждый день'
+      stepTitle='02 &bull; СТЕК'
     >
       <Grid>
         {stackItems.map((stackItem) => (

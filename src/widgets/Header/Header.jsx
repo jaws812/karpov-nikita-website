@@ -41,21 +41,21 @@ const Header = () => {
   }
 
   return (
-    <header className="header">
-      <div className="header__wrapper container">
-        <div className="header__info">
-          <Logo className="header__logo" />
-          <div className="header__name">Никита Карпов</div>
+    <header className='header'>
+      <div className='header__wrapper container'>
+        <div className='header__info'>
+          <Logo className='header__logo' />
+          <div className='header__name'>Никита Карпов</div>
         </div>
         <dialog
-          className="header__overlay-menu-dialog"
-          data-js-overlay-menu-dialog=""
+          className='header__overlay-menu-dialog'
+          data-js-overlay-menu-dialog=''
         >
-          <nav className="header__menu">
-            <ul className="header__menu-list">
+          <nav className='header__menu'>
+            <ul className='header__menu-list'>
               {menuItems.map(({ label, href }) => (
-                <li className="header__menu-item" key={label}>
-                  <a className="header__menu-link" href={href}>
+                <li className='header__menu-item' key={label}>
+                  <a className='header__menu-link' href={href}>
                     {label}
                   </a>
                 </li>
@@ -63,12 +63,12 @@ const Header = () => {
             </ul>
           </nav>
         </dialog>
-        <div className="header__action">
-          <div className="header__action-soc1als">
+        <div className='header__action'>
+          <div className='header__action-soc1als'>
             <Button
-              className="button--small"
-              href="https://t.me/josodo2xx"
-              target="_blank"
+              className='button--small'
+              href='https://t.me/josodo2xx'
+              target='_blank'
             >
               Telegram
             </Button>

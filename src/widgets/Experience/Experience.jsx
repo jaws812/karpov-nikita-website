@@ -25,9 +25,9 @@ const Experience = () => {
   ]
 
   return (
-    <Section title="Путь" stepTitle="04 &bull; Опыт">
-      <div className="experience">
-        <Grid columns={1} gapClassName="experience-gap">
+    <Section title='Путь' stepTitle='04 &bull; Опыт'>
+      <div className='experience'>
+        <Grid columns={1} gapClassName='experience-gap'>
           {experienceItems.map((experienceItem) => (
             <ExperienceCard {...experienceItem} key={experienceItem.title} />
           ))}
