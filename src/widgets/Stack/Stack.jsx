@@ -1,7 +1,7 @@
 import Section from '@/shared/ui/Section'
 import StackCard from '@/entities/stack'
 import Grid from '@/shared/ui/Grid'
-import { stackItems } from '@/pages/MainPage/model/dataItems'
+import { stackItems } from '@/entities/stack/model/stack'
 
 const Stack = () => {
   return (

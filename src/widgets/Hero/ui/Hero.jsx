@@ -1,9 +1,11 @@
 import './Hero.scss'
 import Button from '@/shared/ui/Button'
 import HoverGlowButton from '@/shared/ui/HoverGlowButton'
-import { toolsItems } from '@/pages/MainPage/model/dataItems'
+import { toolsItems } from '@/widgets/Hero/model/heroItems'
+import { contacts } from '@/shared/config/contacts'
 
 const Hero = () => {
+  const link = contacts.find(({ type }) => type === 'github')
   return (
     <section className='section'>
       <div className='container'>
@@ -34,7 +36,7 @@ const Hero = () => {
             </Button>
             <HoverGlowButton
               className='hero__actions-button'
-              href='https://github.com/jaws812'
+              href={link.valueLink}
               target='_blank'
             >
               <div>GitHub</div>

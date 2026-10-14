@@ -1,4 +1,5 @@
-import { dataItems, cardItems } from '@/pages/MainPage/model/dataItems'
+import { cardItems } from '@/widgets/FooterCards/model/cardItems'
+import { menu } from '@/shared/config/menu'
 import Grid from '@/shared/ui/Grid'
 import ContactCard from '@/shared/ui/ContactCard'
 import './FooterCards.scss'
@@ -31,7 +32,7 @@ const FooterCards = () => {
         <div className='footer-cards__bottom'>
           <nav className='footer-cards__menu'>
             <ul className='footer-cards__list'>
-              {dataItems.map(({ label, href }) => (
+              {menu.map(({ label, href }) => (
                 <li className='footer-cards__item' key={href}>
                   <a className='footer-cards__link' href={href}>
                     {label}

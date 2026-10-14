@@ -2,7 +2,7 @@ import './Experience.scss'
 import Section from '@/shared/ui/Section'
 import Grid from '@/shared/ui/Grid'
 import ExperienceCard from '@/entities/experience'
-import { experienceItems } from '@/pages/MainPage/model/dataItems'
+import { experienceItems } from '@/entities/experience/model/experience'
 
 const Experience = () => {
   return (

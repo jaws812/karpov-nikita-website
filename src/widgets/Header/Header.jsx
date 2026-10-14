@@ -1,7 +1,8 @@
 import Button from '@/shared/ui/Button'
 import Logo from '@/shared/ui/Logo'
 import BurgerButton from '@/shared/ui/BurgerButton'
-import { dataItems } from '@/pages/MainPage/model/dataItems'
+import { menu } from '@/shared/config/menu'
+import { contacts } from '@/shared/config/contacts'
 import './Header.scss'
 
 const Header = () => {
@@ -12,6 +13,7 @@ const Header = () => {
     overlayMenu.open = !overlayMenu.open
     document.documentElement.classList.toggle('is-lock')
   }
+  const link = contacts.find(({ type }) => type === 'telegram')
 
   return (
     <header className='header'>
@@ -26,7 +28,7 @@ const Header = () => {
         >
           <nav className='header__menu'>
             <ul className='header__menu-list'>
-              {dataItems.map(({ label, href }) => (
+              {menu.map(({ label, href }) => (
                 <li className='header__menu-item' key={href}>
                   <a className='header__menu-link' href={href}>
                     {label}
@@ -40,7 +42,7 @@ const Header = () => {
           <div className='header__action-soc1als'>
             <Button
               className='button--small'
-              href='https://t.me/josodo2xx'
+              href={link.valueLink}
               target='_blank'
             >
               Telegram

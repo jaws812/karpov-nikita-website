@@ -1,32 +1,10 @@
 import './ContactCard.scss'
+import { contacts } from '@/shared/config/contacts'
 
 const ContactCard = (props) => {
   const { subtitle, title, linkType, isAccent } = props
 
-  const dataLinks = [
-    {
-      type: 'telegram',
-      valueLink: 'https://t.me/josodo2xx',
-      srcIcon: '/telegram.svg',
-    },
-    {
-      type: 'email',
-      valueLink: 'mailto:nikitakarpov-2002@yandex.ru',
-      srcIcon: '/email.svg',
-    },
-    {
-      type: 'document',
-      valueLink: 'https://nikita-karpov-resume.pdf',
-      srcIcon: '/document.svg',
-    },
-    {
-      type: 'github',
-      valueLink: 'https://github.com/jaws812',
-      srcIcon: '/github.svg',
-    },
-  ]
-
-  const linkAttrs = dataLinks.find((data) => data.type === linkType)
+  const linkAttrs = contacts.find((data) => data.type === linkType)
 
   const linkHref = linkAttrs.valueLink
 
