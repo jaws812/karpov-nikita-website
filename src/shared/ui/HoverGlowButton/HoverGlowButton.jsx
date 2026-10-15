@@ -1,5 +1,6 @@
 import './HoverGlowButton.scss'
 import { useRef, useState } from 'react'
+import Button from '@/shared/ui/Button'
 
 const HoverGlowButton = (props) => {
   const {
@@ -17,10 +18,6 @@ const HoverGlowButton = (props) => {
     onClick,
     ...rest
   } = props
-
-  const isLink = href !== undefined
-  const Component = isLink ? 'a' : 'button'
-  const specificProps = isLink ? { href, target } : { type, disabled }
 
   const ref = useRef(null)
   const [pos, setPos] = useState({ x: 0, y: 0 })
@@ -49,9 +46,7 @@ const HoverGlowButton = (props) => {
 
   const classes = [
     className,
-    'button',
     'hover-glow-button',
-    isWide && 'button--wide',
     isHovered && 'hover-glow-button--active',
     disabled && 'hover-glow-button--disabled',
   ]
@@ -59,20 +54,24 @@ const HoverGlowButton = (props) => {
     .join(' ')
 
   return (
-    <Component
+    <Button
+      type={type}
+      href={href}
+      target={target}
+      isWide={isWide}
       ref={ref}
       className={classes}
       style={styleVars}
+      disabled={disabled}
       onClick={onClick}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      {...specificProps}
       {...rest}
     >
       <span className='hover-glow-button__glow' aria-hidden='true' />
       <span className='hover-glow-button__content'>{children}</span>
-    </Component>
+    </Button>
   )
 }
 

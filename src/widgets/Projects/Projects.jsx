@@ -1,14 +1,19 @@
 import Section from '@/shared/ui/Section'
-import ProjectCard from '@/entities/projects'
+import { ProjectCard, projectItems } from '@/entities/projects'
 import Grid from '@/shared/ui/Grid'
-import { projectItems } from '@/entities/projects/model/projects'
+import { contacts } from '@/shared/config/contacts'
 
 const Projects = () => {
   return (
-    <Section title='Мои работы' stepTitle='03 &bull; Проекты' actionButton>
+    <Section
+      title='Мои работы'
+      stepTitle='03 &bull; Проекты'
+      actionButton
+      href={contacts.github.link}
+    >
       <Grid gapClassName='projects-gap'>
         {projectItems.map((item, index) => (
-          <ProjectCard {...item} index={index} key={item.count} />
+          <ProjectCard {...item} index={index} key={item.title} />
         ))}
       </Grid>
     </Section>

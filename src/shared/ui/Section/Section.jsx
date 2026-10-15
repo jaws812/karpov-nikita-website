@@ -1,11 +1,8 @@
 import './Section.scss'
 import HoverGlowButton from '@/shared/ui/HoverGlowButton'
-import { contacts } from '@/shared/config/contacts'
 
 const Section = (props) => {
-  const { children, title, stepTitle, actionButton } = props
-
-  const link = contacts.find(({ type }) => type === 'github')
+  const { children, title, stepTitle, actionButton, href } = props
 
   return (
     <section className='section'>
@@ -13,10 +10,10 @@ const Section = (props) => {
         <div className='section__header'>
           <div className='section__step'>{stepTitle}</div>
           <h2 className='section__title'>{title}</h2>
-          {actionButton && (
+          {actionButton && href && (
             <HoverGlowButton
               className='section__button'
-              href={link.valueLink}
+              href={href}
               target='_blank'
             >
               <div>Все репозитории на GitHub</div>

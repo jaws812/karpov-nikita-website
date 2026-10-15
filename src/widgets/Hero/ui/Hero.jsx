@@ -5,7 +5,6 @@ import { toolsItems } from '@/widgets/Hero/model/heroItems'
 import { contacts } from '@/shared/config/contacts'
 
 const Hero = () => {
-  const link = contacts.find(({ type }) => type === 'github')
   return (
     <section className='section'>
       <div className='container'>
@@ -36,7 +35,7 @@ const Hero = () => {
             </Button>
             <HoverGlowButton
               className='hero__actions-button'
-              href={link.valueLink}
+              href={contacts.github.link}
               target='_blank'
             >
               <div>GitHub</div>

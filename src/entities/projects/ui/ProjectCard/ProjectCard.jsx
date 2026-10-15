@@ -8,7 +8,7 @@ const ProjectCard = (props) => {
       <header className='project-card__header'>Сайт {year}</header>
       <div className='project-card__wrapper'>
         <div className='project-card__counter'>
-          {index <= 8 ? `0${index + 1}` : `${index + 1}`}
+          {(index + 1).toString().padStart(2, '0')}
         </div>
         <div className='project-card__title'>{title}</div>
         <div className='project-card__subtitle'>{subtitle}</div>

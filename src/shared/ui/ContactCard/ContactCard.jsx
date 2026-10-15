@@ -1,26 +1,19 @@
 import './ContactCard.scss'
-import { contacts } from '@/shared/config/contacts'
 
 const ContactCard = (props) => {
-  const { subtitle, title, linkType, isAccent } = props
-
-  const linkAttrs = contacts.find((data) => data.type === linkType)
-
-  const linkHref = linkAttrs.valueLink
-
-  const srcIcon = linkAttrs.srcIcon
+  const { subtitle, title, linkType, isAccent, contacts } = props
 
   return (
     <a
       className={`contact-card ${isAccent ? 'contact-card--accent' : ''}`}
-      href={linkHref !== null ? linkHref : ''}
+      href={contacts[linkType].link}
       target='_blank'
       rel='noreferrer'
     >
       <header className='contact-card__header'>
         <img
           className='contact-card__image'
-          src={`${srcIcon}`}
+          src={contacts[linkType].srcIcon}
           alt=''
           width=''
           height=''

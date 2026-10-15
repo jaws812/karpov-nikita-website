@@ -1,5 +1,6 @@
 import { cardItems } from '@/widgets/FooterCards/model/cardItems'
 import { menu } from '@/shared/config/menu'
+import { contacts } from '@/shared/config/contacts'
 import Grid from '@/shared/ui/Grid'
 import ContactCard from '@/shared/ui/ContactCard'
 import './FooterCards.scss'
@@ -20,12 +21,22 @@ const FooterCards = () => {
                 return (
                   <Grid actionClassName='first-item-wide' key={cardItem.title}>
                     {cardItem.secondColumn.map((item) => (
-                      <ContactCard {...item} key={item.linkType} />
+                      <ContactCard
+                        {...item}
+                        contacts={contacts}
+                        key={item.linkType}
+                      />
                     ))}
                   </Grid>
                 )
               }
-              return <ContactCard {...cardItem} key={cardItem.linkType} />
+              return (
+                <ContactCard
+                  {...cardItem}
+                  contacts={contacts}
+                  key={cardItem.linkType}
+                />
+              )
             })}
           </Grid>
         </header>

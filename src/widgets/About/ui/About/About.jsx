@@ -1,8 +1,9 @@
 import './About.scss'
-import './Metric.scss'
+import '../Metric/Metric.scss'
 import Section from '@/shared/ui/Section'
 import { metricItems } from '@/widgets/About/model/metricItems'
 import { infoItems } from '@/widgets/About/model/infoItems'
+import MetricCard from '@/widgets/About/ui/Metric/MetricCard'
 
 const About = () => {
   return (
@@ -39,14 +40,8 @@ const About = () => {
         </div>
         <div className='about__metric metric'>
           <dl className='metric__list'>
-            {metricItems.map(({ title, subtitle, description }) => (
-              <div className='metric__item' key={title}>
-                <dt className='metric__term'>{description}</dt>
-                <dt className='metric__value metric__value--subtitle'>
-                  {subtitle}
-                </dt>
-                <dd className='metric__value'>{title}</dd>
-              </div>
+            {metricItems.map((metricItem) => (
+              <MetricCard {...metricItem} key={metricItem.title} />
             ))}
           </dl>
         </div>

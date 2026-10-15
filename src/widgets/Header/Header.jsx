@@ -13,7 +13,6 @@ const Header = () => {
     overlayMenu.open = !overlayMenu.open
     document.documentElement.classList.toggle('is-lock')
   }
-  const link = contacts.find(({ type }) => type === 'telegram')
 
   return (
     <header className='header'>
@@ -42,7 +41,7 @@ const Header = () => {
           <div className='header__action-soc1als'>
             <Button
               className='button--small'
-              href={link.valueLink}
+              href={contacts.telegram.link}
               target='_blank'
             >
               Telegram

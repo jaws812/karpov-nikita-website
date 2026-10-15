@@ -8,8 +8,8 @@ const Work = () => {
     <Section title='Не только код' stepTitle='05 &bull; Как я работаю'>
       <div className='work'>
         <Grid columns={4}>
-          {workSteps.map((workStep) => (
-            <WorkCard {...workStep} key={workStep.counter} />
+          {workSteps.map((workStep, index) => (
+            <WorkCard {...workStep} index={index} key={workStep.title} />
           ))}
         </Grid>
       </div>
