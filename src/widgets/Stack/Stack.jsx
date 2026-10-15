@@ -7,6 +7,7 @@ const Stack = () => {
     <Section
       title='Инструменты, которыми пользуюсь каждый день'
       stepTitle='02 &bull; СТЕК'
+      id='stack'
     >
       <Grid>
         {stackItems.map((stackItem) => (

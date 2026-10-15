@@ -1,4 +1,4 @@
-import { cardItems } from '@/widgets/FooterCards/model/cardItems'
+import { cardItems } from '@/widgets/FooterCards'
 import { menu } from '@/shared/config/menu'
 import { contacts } from '@/shared/config/contacts'
 import Grid from '@/shared/ui/Grid'
@@ -7,11 +7,17 @@ import './FooterCards.scss'
 
 const FooterCards = () => {
   return (
-    <div className='footer-cards'>
+    <div
+      className='footer-cards'
+      id='contacts'
+      aria-labelledby='contacts-title'
+    >
       <div className='footer-cards__wrapper container'>
         <header className='footer-cards__header'>
           <div className='footer-cards__connection'>Способы связи</div>
-          <h2 className='footer-cards__title h1'>Контакты</h2>
+          <h2 className='footer-cards__title h1' id='contacts-title'>
+            Контакты
+          </h2>
           <div className='footer-cards__description'>
             Работаю с React. Открыт к офису в Самаре и к удалёнке.
           </div>

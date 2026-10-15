@@ -1,15 +1,15 @@
 import './Hero.scss'
 import Button from '@/shared/ui/Button'
 import HoverGlowButton from '@/shared/ui/HoverGlowButton'
-import { toolsItems } from '@/widgets/Hero/model/heroItems'
+import { toolsItems } from '@/widgets/Hero'
 import { contacts } from '@/shared/config/contacts'
 
 const Hero = () => {
   return (
-    <section className='section'>
+    <section className='section' aria-labelledby='hero-title'>
       <div className='container'>
         <div className='hero'>
-          <h1 className='hero__title'>
+          <h1 className='hero__title' id='hero-title'>
             Карпов Никита{' '}
             <span className='hero__title--accent'>frontend-разработчик</span>{' '}
             и&nbsp;верстальщик

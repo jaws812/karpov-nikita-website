@@ -1,26 +1,26 @@
 export const menu = [
   {
     label: 'Обо мне',
-    href: '/about-me',
+    href: '#about',
   },
   {
     label: 'Стек',
-    href: '/stack',
+    href: '#stack',
   },
   {
     label: 'Проекты',
-    href: '/projects',
+    href: '#projects',
   },
   {
     label: 'Путь',
-    href: '/way',
+    href: '#experience',
   },
   {
     label: 'Как я работаю',
-    href: '/work',
+    href: '#work',
   },
   {
     label: 'Контакты',
-    href: '/contacts',
+    href: '#contacts',
   },
 ]

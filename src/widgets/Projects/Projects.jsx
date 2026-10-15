@@ -1,5 +1,5 @@
 import Section from '@/shared/ui/Section'
-import { ProjectCard, projectItems } from '@/entities/projects'
+import { ProjectCard, projectItems } from '@/entities/project'
 import Grid from '@/shared/ui/Grid'
 import { contacts } from '@/shared/config/contacts'
 
@@ -10,6 +10,7 @@ const Projects = () => {
       stepTitle='03 &bull; Проекты'
       actionButton
       href={contacts.github.link}
+      id='projects'
     >
       <Grid gapClassName='projects-gap'>
         {projectItems.map((item, index) => (

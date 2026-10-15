@@ -1,5 +1,5 @@
 import Header from '@/widgets/Header'
-import Main from '@/widgets/Main'
+import Main from '@/pages/main'
 import Footer from '@/widgets/Footer'
 import './styles'
 

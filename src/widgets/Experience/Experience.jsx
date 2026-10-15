@@ -5,7 +5,7 @@ import { ExperienceCard, experienceItems } from '@/entities/experience'
 
 const Experience = () => {
   return (
-    <Section title='Путь' stepTitle='04 &bull; Опыт'>
+    <Section title='Путь' stepTitle='04 &bull; Опыт' id='experience'>
       <div className='experience'>
         <Grid columns={1} gapClassName='experience-gap'>
           {experienceItems.map((experienceItem) => (

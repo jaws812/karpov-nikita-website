@@ -2,14 +2,17 @@ import './Section.scss'
 import HoverGlowButton from '@/shared/ui/HoverGlowButton'
 
 const Section = (props) => {
-  const { children, title, stepTitle, actionButton, href } = props
+  const { children, title, stepTitle, actionButton, href, id } =
+    props
 
   return (
-    <section className='section'>
+    <section className='section' id={id} aria-labelledby={`${id}-title`}>
       <div className='section__wrapper container'>
         <div className='section__header'>
           <div className='section__step'>{stepTitle}</div>
-          <h2 className='section__title'>{title}</h2>
+          <h2 className='section__title' id={`${id}-title`}>
+            {title}
+          </h2>
           {actionButton && href && (
             <HoverGlowButton
               className='section__button'

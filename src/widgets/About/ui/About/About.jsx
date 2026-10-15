@@ -1,8 +1,9 @@
 import './About.scss'
 import '../Metric/Metric.scss'
 import Section from '@/shared/ui/Section'
-import { metricItems } from '@/widgets/About/model/metricItems'
-import { infoItems } from '@/widgets/About/model/infoItems'
+// import { metricItems } from '@/widgets/About/model/metricItems'
+// import { infoItems } from '@/widgets/About/model/infoItems'
+import { metricItems, infoItems } from '@/widgets/About'
 import MetricCard from '@/widgets/About/ui/Metric/MetricCard'
 
 const About = () => {
@@ -10,6 +11,7 @@ const About = () => {
     <Section
       stepTitle='01 &bull; Обо мне'
       title='Разрабатываю сайты на HTML, CSS и JS, работаю на разных CMS'
+      id='about'
     >
       <div className='about'>
         <div className='about__info'>
@@ -23,7 +25,7 @@ const About = () => {
             <p>
               Работаю без тяжёлых фреймворков — HTML, CSS/SCSS(Bootstrap),
               JavaScript, БЭМ и js-библиотеки вроде jQuery и Slick Slider. Есть
-              опыт с PHP и базами данных. Сейчас активно изуючаю разработку
+              опыт с PHP и базами данных. Сейчас активно изучаю разработку
               сайтов на React.
             </p>
           </div>
