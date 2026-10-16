@@ -9,9 +9,6 @@ const Button = (props) => {
     target,
     isWide,
     disabled,
-    onMouseMove,
-    onMouseEnter,
-    onMouseLeave,
     ...rest
   } = props
 
@@ -22,9 +19,6 @@ const Button = (props) => {
   return (
     <Component
       className={`${className} button ${isWide ? 'button--wide' : ''}`}
-      onMouseMove={onMouseMove}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
       {...specificProps}
       {...rest}
     >

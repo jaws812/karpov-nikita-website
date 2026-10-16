@@ -1,8 +1,6 @@
 import './About.scss'
 import '../Metric/Metric.scss'
 import Section from '@/shared/ui/Section'
-// import { metricItems } from '@/widgets/About/model/metricItems'
-// import { infoItems } from '@/widgets/About/model/infoItems'
 import { metricItems, infoItems } from '@/widgets/About'
 import MetricCard from '@/widgets/About/ui/Metric/MetricCard'
 
