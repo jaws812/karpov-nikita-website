@@ -6,6 +6,9 @@ import ContactCard from '@/shared/ui/ContactCard'
 import './FooterCards.scss'
 
 const FooterCards = () => {
+  const accentCard = cardItems[0]
+  const otherCards = cardItems.slice(1)
+
   return (
     <div
       className='footer-cards'
@@ -22,30 +25,28 @@ const FooterCards = () => {
             Работаю с React. Открыт к офису в Самаре и к удалёнке.
           </div>
           <Grid>
-            {cardItems.map((cardItem) => {
-              if (cardItem.secondColumn !== undefined) {
-                return (
-                  <Grid actionClassName='first-item-wide' key={cardItem.title}>
-                    {cardItem.secondColumn.map((item) => (
-                      <ContactCard
-                        {...item}
-                        href={contacts[item.linkType].link}
-                        srcIcon={contacts[item.linkType].srcIcon}
-                        key={item.linkType}
-                      />
-                    ))}
-                  </Grid>
-                )
-              }
-              return (
-                <ContactCard
-                  {...cardItem}
-                  href={contacts[cardItem.linkType].link}
-                  srcIcon={contacts[cardItem.linkType].srcIcon}
-                  key={cardItem.linkType}
-                />
-              )
-            })}
+            {accentCard && (
+              <ContactCard
+                isAccent
+                {...accentCard}
+                href={contacts[accentCard.linkType].link}
+                srcIcon={contacts[accentCard.linkType].srcIcon}
+              />
+            )}
+            {otherCards.length > 0 && (
+              <Grid actionClassName='first-item-wide'>
+                {otherCards.map((item) => {
+                  return (
+                    <ContactCard
+                      {...item}
+                      href={contacts[item.linkType].link}
+                      srcIcon={contacts[item.linkType].srcIcon}
+                      key={item.title}
+                    />
+                  )
+                })}
+              </Grid>
+            )}
           </Grid>
         </div>
         <div className='footer-cards__bottom'>
