@@ -20,6 +20,12 @@
     pointer-events: none;
   }
 
+  &__svg {
+    @include mobile {
+      @include visually-hidden;
+    }
+  }
+
   &__glow {
     position: absolute;
     left: var(--glow-x, 50%);

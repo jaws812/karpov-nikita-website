@@ -13,7 +13,7 @@ const FooterCards = () => {
       aria-labelledby='contacts-title'
     >
       <div className='footer-cards__wrapper container'>
-        <header className='footer-cards__header'>
+        <div className='footer-cards__header'>
           <div className='footer-cards__connection'>Способы связи</div>
           <h2 className='footer-cards__title h1' id='contacts-title'>
             Контакты
@@ -29,7 +29,8 @@ const FooterCards = () => {
                     {cardItem.secondColumn.map((item) => (
                       <ContactCard
                         {...item}
-                        contacts={contacts}
+                        href={contacts[item.linkType].link}
+                        srcIcon={contacts[item.linkType].srcIcon}
                         key={item.linkType}
                       />
                     ))}
@@ -39,13 +40,14 @@ const FooterCards = () => {
               return (
                 <ContactCard
                   {...cardItem}
-                  contacts={contacts}
+                  href={contacts[cardItem.linkType].link}
+                  srcIcon={contacts[cardItem.linkType].srcIcon}
                   key={cardItem.linkType}
                 />
               )
             })}
           </Grid>
-        </header>
+        </div>
         <div className='footer-cards__bottom'>
           <nav className='footer-cards__menu'>
             <ul className='footer-cards__list'>

@@ -1,19 +1,19 @@
 import './ContactCard.scss'
 
 const ContactCard = (props) => {
-  const { subtitle, title, linkType, isAccent, contacts } = props
+  const { subtitle, title, isAccent, href, srcIcon } = props
 
   return (
     <a
       className={`contact-card ${isAccent ? 'contact-card--accent' : ''}`}
-      href={contacts[linkType].link}
+      href={href}
       target='_blank'
       rel='noreferrer'
     >
       <header className='contact-card__header'>
         <img
           className='contact-card__image'
-          src={contacts[linkType].srcIcon}
+          src={srcIcon}
           alt=''
           width=''
           height=''

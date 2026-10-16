@@ -3,6 +3,14 @@
     background-color: var(--color-dark-2);
   }
 
+  &__body {
+    &--flex {
+      display: flex;
+      flex-direction: column;
+      gap: fluid(56, 40);
+    }
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -38,9 +46,5 @@
 
   &__title {
     letter-spacing: -1.8px;
-  }
-
-  &__button {
-    width: fit-content;
   }
 }
