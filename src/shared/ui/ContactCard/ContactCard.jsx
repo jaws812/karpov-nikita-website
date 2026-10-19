@@ -10,7 +10,7 @@ const ContactCard = (props) => {
       target='_blank'
       rel='noreferrer'
     >
-      <header className='contact-card__header'>
+      <div className='contact-card__header'>
         <img
           className='contact-card__image'
           src={srcIcon}
@@ -42,7 +42,7 @@ const ContactCard = (props) => {
             strokeLinejoin='round'
           />
         </svg>
-      </header>
+      </div>
       <div className='contact-card__bottom'>
         <div className='contact-card__subtitle'>{subtitle}</div>
         <h3 className='contact-card__title'>{title}</h3>
