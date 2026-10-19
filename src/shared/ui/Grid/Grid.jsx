@@ -8,10 +8,11 @@ const Grid = (props) => {
 
   return (
     <ul
-      className={clsx('grid', {
-        [`grid--${columns}`]: columns > 1,
-        [gapClasses[gap]]: gap,
-      })}
+      className={clsx(
+        'grid',
+        gapClasses[gap],
+        columns > 1 && [`grid--${columns}`],
+      )}
     >
       {children?.map((child, index) => (
         <li
