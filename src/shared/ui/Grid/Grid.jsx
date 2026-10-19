@@ -1,14 +1,16 @@
 import './Grid.scss'
 import clsx from 'clsx'
 
+const gapClasses = { md: 'grid--md-gap', lg: 'grid--lg-gap' }
+
 const Grid = (props) => {
-  const { children, columns = 2, gapClassName, isFirstWide } = props
+  const { children, columns = 2, gap, isFirstWide } = props
 
   return (
     <ul
       className={clsx('grid', {
         [`grid--${columns}`]: columns > 1,
-        [`grid--${gapClassName}`]: gapClassName,
+        [gapClasses[gap]]: gap,
       })}
     >
       {children?.map((child, index) => (

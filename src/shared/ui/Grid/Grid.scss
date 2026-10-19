@@ -35,11 +35,11 @@
     }
   }
 
-  &--projects-gap {
+  &--md-gap {
     --absoluteGap: #{fluid(40, 32)};
   }
 
-  &--experience-gap {
+  &--lg-gap {
     --absoluteGap: #{fluid(56, 40)};
   }
 

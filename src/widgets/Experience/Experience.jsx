@@ -7,7 +7,7 @@ const Experience = () => {
   return (
     <Section title='Путь' stepTitle='04 &bull; Опыт' id='experience'>
       <div className='experience'>
-        <Grid columns={1} gapClassName='experience-gap'>
+        <Grid columns={1} gap='lg'>
           {experienceItems.map((experienceItem) => (
             <ExperienceCard {...experienceItem} key={experienceItem.title} />
           ))}
