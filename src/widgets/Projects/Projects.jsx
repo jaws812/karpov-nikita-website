@@ -9,8 +9,6 @@ const Projects = () => {
     <Section
       title='Мои работы'
       stepTitle='03 &bull; Проекты'
-      actionButton
-      href={contacts.github.link}
       id='projects'
       isSectionBodyFlex
     >

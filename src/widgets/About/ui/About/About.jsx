@@ -1,8 +1,8 @@
 import './About.scss'
-import '../Metric/Metric.scss'
 import Section from '@/shared/ui/Section'
-import { metricItems, infoItems } from '@/widgets/About'
-import MetricCard from '@/widgets/About/ui/Metric/MetricCard'
+import { infoItems } from '../../model/infoItems'
+import { metricItems } from '../../model/metricItems'
+import MetricCard from '../Metric/MetricCard'
 
 const About = () => {
   return (

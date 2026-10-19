@@ -1,7 +1,7 @@
 import Section from '@/shared/ui/Section'
 import Grid from '@/shared/ui/Grid'
 import WorkCard from '@/shared/ui/WorkCard'
-import { workSteps } from '@/widgets/Work'
+import { workSteps } from '../model/workSteps'
 
 const Work = () => {
   return (

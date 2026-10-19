@@ -1,4 +1,4 @@
-import { cardItems } from '@/widgets/FooterCards'
+import { cardItems } from '../../model/cardItems'
 import { menu } from '@/shared/config/menu'
 import { contacts } from '@/shared/config/contacts'
 import Grid from '@/shared/ui/Grid'

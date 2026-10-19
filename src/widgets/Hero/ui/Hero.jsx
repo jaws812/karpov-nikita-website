@@ -1,7 +1,7 @@
 import './Hero.scss'
 import Button from '@/shared/ui/Button'
 import HoverGlowButton from '@/shared/ui/HoverGlowButton'
-import { toolsItems } from '@/widgets/Hero'
+import { toolsItems } from '../model/heroItems'
 import { contacts } from '@/shared/config/contacts'
 
 const Hero = () => {
