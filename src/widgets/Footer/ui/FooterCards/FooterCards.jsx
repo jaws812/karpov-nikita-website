@@ -34,7 +34,7 @@ const FooterCards = () => {
               />
             )}
             {otherCards.length > 0 && (
-              <Grid actionClassName='first-item-wide'>
+              <Grid isFirstWide>
                 {otherCards.map((item) => {
                   return (
                     <ContactCard

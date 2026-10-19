@@ -1,9 +1,10 @@
 import './Button.scss'
+import clsx from 'clsx'
 
 const Button = (props) => {
   const {
     children,
-    className = '',
+    className,
     type = 'button',
     href,
     target,
@@ -18,7 +19,7 @@ const Button = (props) => {
 
   return (
     <Component
-      className={`${className} button ${isWide ? 'button--wide' : ''}`}
+      className={clsx('button', className, isWide && 'button--wide')}
       {...specificProps}
       {...rest}
     >

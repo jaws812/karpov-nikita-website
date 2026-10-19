@@ -1,12 +1,13 @@
 import './Logo.scss'
+import clsx from 'clsx'
 
 const Logo = (props) => {
-  const { className = '' } = props
+  const { className } = props
   const title = 'Главная страница'
 
   return (
     <a
-      className={`${className} logo`}
+      className={clsx('logo', className)}
       href='/'
       title={title}
       aria-label={title}

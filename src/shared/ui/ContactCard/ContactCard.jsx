@@ -1,11 +1,12 @@
 import './ContactCard.scss'
+import clsx from 'clsx'
 
 const ContactCard = (props) => {
   const { subtitle, title, isAccent, href, srcIcon } = props
 
   return (
     <a
-      className={`contact-card ${isAccent ? 'contact-card--accent' : ''}`}
+      className={clsx('contact-card', isAccent && 'contact-card--accent')}
       href={href}
       target='_blank'
       rel='noreferrer'

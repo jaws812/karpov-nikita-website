@@ -1,4 +1,5 @@
 import './Section.scss'
+import clsx from 'clsx'
 
 const Section = (props) => {
   const { children, title, stepTitle, id, isSectionBodyFlex } = props
@@ -13,7 +14,10 @@ const Section = (props) => {
           </h2>
         </div>
         <div
-          className={`section__body ${isSectionBodyFlex ? 'section__body--flex' : ''}`}
+          className={clsx(
+            'section__body',
+            isSectionBodyFlex && 'section__body--flex',
+          )}
         >
           {children}
         </div>

@@ -1,4 +1,5 @@
 import './BurgerButton.scss'
+import clsx from 'clsx'
 
 const BurgerButton = (props) => {
   const { className, onClick } = props
@@ -7,7 +8,7 @@ const BurgerButton = (props) => {
 
   return (
     <button
-      className={`${className} burger-button`}
+      className={clsx('burger-button', className)}
       type='button'
       aria-label={title}
       title={title}

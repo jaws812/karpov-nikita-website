@@ -1,11 +1,12 @@
 import './HoverGlowButton.scss'
 import { useRef, useState } from 'react'
 import Button from '@/shared/ui/Button'
+import clsx from 'clsx'
 
 const HoverGlowButton = (props) => {
   const {
     children,
-    className = '',
+    className,
     type = 'button',
     href,
     target,
@@ -44,23 +45,17 @@ const HoverGlowButton = (props) => {
     '--glow-y': `${pos.y}px`,
   }
 
-  const classes = [
-    className,
-    'hover-glow-button',
-    isHovered && 'hover-glow-button--active',
-    disabled && 'hover-glow-button--disabled',
-  ]
-    .filter(Boolean)
-    .join(' ')
-
   return (
     <Button
+      className={clsx(className, 'hover-glow-button', {
+        'hover-glow-button--active': isHovered,
+        'hover-glow-button--disabled': disabled,
+      })}
       type={type}
       href={href}
       target={target}
       isWide={isWide}
       ref={ref}
-      className={classes}
       style={styleVars}
       disabled={disabled}
       onClick={onClick}
