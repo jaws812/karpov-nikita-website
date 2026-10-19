@@ -17,7 +17,6 @@ export default defineConfig([
     },
     extends: [
       js.configs.recommended,
-      prettierConfig,
       reactHooks.configs.flat.recommended,
       reactRefresh.configs.vite,
     ],
@@ -54,4 +53,5 @@ export default defineConfig([
     files: ['**/*.{jsx,js}'],
     ...jsxA11y.flatConfigs.recommended,
   },
+  prettierConfig,
 ])
