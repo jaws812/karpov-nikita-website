@@ -34,6 +34,10 @@ main {
 
 .section {
   padding-block: fluid(128, 64);
+
+  &:nth-child(2n) {
+    background-color: var(--color-dark-2);
+  }
 }
 
 h1,

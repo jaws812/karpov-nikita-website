@@ -1,22 +1,23 @@
-import './BurgerButton.scss'
+import css from './BurgerButton.module.scss'
 import clsx from 'clsx'
 
 const BurgerButton = (props) => {
-  const { className, onClick } = props
+  const { className, onClick, isActive } = props
 
-  const title = 'Открыть меню'
+  const title = isActive ? 'Закрыть меню' : 'Открыть меню'
 
   return (
     <button
-      className={clsx('burger-button', className)}
+      className={clsx(css.burgerButton, className, isActive && css.isActive)}
       type='button'
-      aria-label={title}
       title={title}
+      aria-label={title}
+      aria-expanded={isActive}
       onClick={onClick}
     >
-      <span className='line'></span>
-      <span className='line'></span>
-      <span className='line'></span>
+      <span className={css.line}></span>
+      <span className={css.line}></span>
+      <span className={css.line}></span>
     </button>
   )
 }

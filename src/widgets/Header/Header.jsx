@@ -1,35 +1,46 @@
 import Button from '@/shared/ui/Button'
 import Logo from '@/shared/ui/Logo'
 import BurgerButton from '@/shared/ui/BurgerButton'
+import { useEffect, useState } from 'react'
 import { menu } from '@/shared/config/menu'
 import { contacts } from '@/shared/config/contacts'
-import './Header.scss'
+import css from './Header.module.scss'
 
 const Header = () => {
-  const onClick = (event) => {
-    const overlayMenu = document.querySelector('[data-js-overlay-menu-dialog]')
-
-    event.currentTarget.classList.toggle('is-active')
-    overlayMenu.open = !overlayMenu.open
-    document.documentElement.classList.toggle('is-lock')
+  const [isOpen, setIsOpen] = useState(false)
+  const onClick = () => {
+    setIsOpen(!isOpen)
   }
 
+  const hideMenu = () => {
+    setIsOpen(false)
+  }
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('is-lock', isOpen)
+
+    return () => {
+      document.documentElement.classList.remove('is-lock')
+    }
+  }, [isOpen])
+
   return (
-    <header className='header'>
-      <div className='header__wrapper container'>
-        <div className='header__info'>
-          <Logo className='header__logo' />
-          <div className='header__name'>Никита Карпов</div>
+    <header className={css.header}>
+      <div className={`${css.wrapper} container`}>
+        <div className={css.info}>
+          <Logo className={css.headerLogo} />
+          <div className={css.headerName}>Никита Карпов</div>
         </div>
-        <dialog
-          className='header__overlay-menu-dialog'
-          data-js-overlay-menu-dialog=''
-        >
-          <nav className='header__menu'>
-            <ul className='header__menu-list'>
+        <dialog className={css.overlayMenuDialog} open={isOpen}>
+          <nav className={css.headerMenu}>
+            <ul className={css.headerMenuList}>
               {menu.map(({ label, href }) => (
-                <li className='header__menu-item' key={href}>
-                  <a className='header__menu-link' href={href}>
+                <li key={href}>
+                  <a
+                    className={css.headerMenuLink}
+                    href={href}
+                    onClick={hideMenu}
+                  >
                     {label}
                   </a>
                 </li>
@@ -37,18 +48,14 @@ const Header = () => {
             </ul>
           </nav>
         </dialog>
-        <div className='header__action'>
-          <div className='header__action-soc1als'>
-            <Button
-              className='button--small'
-              href={contacts.telegram.link}
-              target='_blank'
-            >
+        <div className={css.action}>
+          <div>
+            <Button isSmall href={contacts.telegram.link} target='_blank'>
               Telegram
             </Button>
           </div>
         </div>
-        <BurgerButton className={'header__burger-button'} onClick={onClick} />
+        <BurgerButton onClick={onClick} isActive={isOpen} />
       </div>
     </header>
   )

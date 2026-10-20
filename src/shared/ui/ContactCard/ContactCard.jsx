@@ -1,4 +1,4 @@
-import './ContactCard.scss'
+import css from './ContactCard.module.scss'
 import clsx from 'clsx'
 
 const ContactCard = (props) => {
@@ -6,14 +6,14 @@ const ContactCard = (props) => {
 
   return (
     <a
-      className={clsx('contact-card', isAccent && 'contact-card--accent')}
+      className={clsx(css.contactCard, isAccent && css.accent)}
       href={href}
       target='_blank'
       rel='noreferrer'
     >
-      <div className='contact-card__header'>
+      <div className={css.header}>
         <img
-          className='contact-card__image'
+          className={css.image}
           src={srcIcon}
           alt=''
           width=''
@@ -21,7 +21,7 @@ const ContactCard = (props) => {
           loading='lazy'
         />
         <svg
-          className='contact-card__header-icon'
+          className={css.headerIcon}
           width='40'
           height='40'
           viewBox='0 0 40 40'
@@ -44,14 +44,13 @@ const ContactCard = (props) => {
           />
         </svg>
       </div>
-      <div className='contact-card__bottom'>
-        <div className='contact-card__subtitle'>{subtitle}</div>
-        <h3 className='contact-card__title'>{title}</h3>
+      <div className={css.bottom}>
+        <div className={css.subtitle}>{subtitle}</div>
+        <h3 className={css.title}>{title}</h3>
         {isAccent && (
-          <div className='contact-card__extra'>
+          <div className={css.extra}>
             Написать в Telegram
             <svg
-              className='contact-card__extra-icon'
               width='25'
               height='25'
               viewBox='0 0 24 24'

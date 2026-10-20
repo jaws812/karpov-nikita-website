@@ -1,24 +1,19 @@
-import './Grid.scss'
+import css from './Grid.module.scss'
 import clsx from 'clsx'
 
-const gapClasses = { md: 'grid--md-gap', lg: 'grid--lg-gap' }
+const gapClasses = { md: css.mdGap, lg: css.lgGap }
+const columnsClasses = { 2: css.grid2, 4: css.grid4 }
 
 const Grid = (props) => {
   const { children, columns = 2, gap, isFirstWide } = props
 
   return (
-    <ul
-      className={clsx(
-        'grid',
-        gapClasses[gap],
-        columns > 1 && [`grid--${columns}`],
-      )}
-    >
+    <ul className={clsx(css.grid, gapClasses[gap], columnsClasses[columns])}>
       {children?.map((child, index) => (
         <li
           className={clsx(
-            'grid__item',
-            isFirstWide && index === 0 && `grid--first-item-wide`,
+            css.item,
+            isFirstWide && index === 0 && css.firstItemWide,
           )}
           key={index}
         >

@@ -1,4 +1,4 @@
-import './Button.scss'
+import css from './Button.module.scss'
 import clsx from 'clsx'
 
 const Button = (props) => {
@@ -9,6 +9,7 @@ const Button = (props) => {
     href,
     target,
     isWide,
+    isSmall,
     disabled,
     ...rest
   } = props
@@ -19,7 +20,12 @@ const Button = (props) => {
 
   return (
     <Component
-      className={clsx('button', className, isWide && 'button--wide')}
+      className={clsx(
+        css.button,
+        className,
+        isWide && css.buttonWide,
+        isSmall && css.buttonSmall,
+      )}
       {...specificProps}
       {...rest}
     >

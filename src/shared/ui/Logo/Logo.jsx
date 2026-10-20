@@ -1,4 +1,4 @@
-import './Logo.scss'
+import css from './Logo.module.scss'
 import clsx from 'clsx'
 
 const Logo = (props) => {
@@ -7,18 +7,12 @@ const Logo = (props) => {
 
   return (
     <a
-      className={clsx('logo', className)}
+      className={clsx(css.logo, className)}
       href='/'
       title={title}
       aria-label={title}
     >
-      <img
-        className='logo__image'
-        src='/logo.svg'
-        alt=''
-        width={122}
-        height={40}
-      />
+      <img src='/logo.svg' alt='' width={122} height={40} />
     </a>
   )
 }

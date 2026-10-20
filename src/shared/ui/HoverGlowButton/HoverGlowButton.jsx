@@ -1,4 +1,4 @@
-import './HoverGlowButton.scss'
+import css from './HoverGlowButton.module.scss'
 import { useRef, useState } from 'react'
 import Button from '@/shared/ui/Button'
 import clsx from 'clsx'
@@ -47,9 +47,9 @@ const HoverGlowButton = (props) => {
 
   return (
     <Button
-      className={clsx(className, 'hover-glow-button', {
-        'hover-glow-button--active': isHovered,
-        'hover-glow-button--disabled': disabled,
+      className={clsx(className, css.hoverGlowButton, {
+        [css.active]: isHovered,
+        [css.disabled]: disabled,
       })}
       type={type}
       href={href}
@@ -64,8 +64,8 @@ const HoverGlowButton = (props) => {
       onMouseLeave={() => setIsHovered(false)}
       {...rest}
     >
-      <span className='hover-glow-button__glow' aria-hidden='true' />
-      <span className='hover-glow-button__content'>{children}</span>
+      <span className={css.glow} aria-hidden='true' />
+      <span className={css.content}>{children}</span>
     </Button>
   )
 }

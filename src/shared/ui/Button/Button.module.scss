@@ -15,16 +15,16 @@
     color: var(--color-green-4);
     background-color: var(--color-green-1);
   }
+}
 
-  &--wide {
-    padding-inline: 100px;
-  }
+.buttonWide {
+  padding-inline: 100px;
+}
 
-  &--small {
-    font-size: 14px;
-    font-weight: 400;
-    padding: 12px 16px;
-    border: none;
-    background-color: var(--color-dark-4);
-  }
+.buttonSmall {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 12px 16px;
+  border: none;
+  background-color: var(--color-dark-4);
 }
