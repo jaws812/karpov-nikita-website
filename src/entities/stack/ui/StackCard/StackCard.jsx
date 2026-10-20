@@ -6,7 +6,7 @@ const StackCard = (props) => {
   return (
     <div className={css.stackCard}>
       <div className={css.title}>{title}</div>
-      <ul>
+      <ul className={css.list}>
         {property.map(({ title, description }) => (
           <li className={css.item} key={title}>
             <div className={css.itemTitle}>{title}</div>

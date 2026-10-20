@@ -1,40 +1,41 @@
-import './Hero.scss'
+import css from './Hero.module.scss'
 import Button from '@/shared/ui/Button'
 import HoverGlowButton from '@/shared/ui/HoverGlowButton'
 import { toolsItems } from '../model/heroItems'
 import { contacts } from '@/shared/config/contacts'
+import clsx from 'clsx'
 
 const Hero = () => {
   return (
     <section className='section' aria-labelledby='hero-title'>
       <div className='container'>
-        <div className='hero'>
-          <h1 className='hero__title' id='hero-title'>
+        <div className={css.hero}>
+          <h1 className={css.title} id='hero-title'>
             Карпов Никита{' '}
-            <span className='hero__title--accent'>frontend-разработчик</span>{' '}
+            <span className={css.titleAccent}>frontend-разработчик</span>{' '}
             и&nbsp;верстальщик
           </h1>
-          <div className='hero__description'>
+          <div className={css.description}>
             Верстаю корпоративные сайты и лендинги по современным стандартам,
             работаю с разными CMS и понимаю, как сайт устроен целиком: хостинг,
             домен, PHP и база данных.
           </div>
-          <div className='hero__subtitle'>
+          <div className={css.subtitle}>
             Изучаю React и имею опыт работы с разработкой коммерческих сайтов.
           </div>
-          <div className='hero__location'>
+          <div className={css.location}>
             Россия, Самара &bull; офис или удалённо
           </div>
-          <div className='hero__actions'>
+          <div className={css.actions}>
             <Button
-              className='hero__actions-button hero__actions-button--accent'
+              className={clsx(css.actionsButton, css.actionsButtonAccent)}
               isWide
               href='#'
             >
               Резюме
             </Button>
             <HoverGlowButton
-              className='hero__actions-button'
+              className={css.actionsButton}
               href={contacts.github.link}
               target='_blank'
             >
@@ -81,10 +82,10 @@ const Hero = () => {
               </svg>
             </HoverGlowButton>
           </div>
-          <div className='hero__tools'>
-            <ul className='hero__tools-list'>
+          <div className={css.tools}>
+            <ul className={css.toolsList}>
               {toolsItems.map((name) => (
-                <li className='hero__tools-item' key={name}>
+                <li className={css.toolsItem} key={name}>
                   {name}
                 </li>
               ))}

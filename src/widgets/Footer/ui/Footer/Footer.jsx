@@ -1,9 +1,9 @@
-import './Footer.scss'
+import css from './Footer.module.scss'
 import FooterCards from '../FooterCards/FooterCards'
 
 const Footer = () => {
   return (
-    <footer className='footer'>
+    <footer className={css.footer}>
       <FooterCards />
     </footer>
   )

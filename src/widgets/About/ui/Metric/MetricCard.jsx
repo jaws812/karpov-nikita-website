@@ -1,12 +1,13 @@
-import './Metric.scss'
+import css from './Metric.module.scss'
+import clsx from 'clsx'
 
 const MetricCard = (props) => {
   const { description, subtitle, title } = props
   return (
-    <div className='metric__item'>
-      <dt className='metric__term'>{description}</dt>
-      <dt className='metric__value metric__value--subtitle'>{subtitle}</dt>
-      <dd className='metric__value'>{title}</dd>
+    <div className={css.item}>
+      <dt>{description}</dt>
+      <dt className={clsx(css.value, css.valueSubtitle)}>{subtitle}</dt>
+      <dd className={css.value}>{title}</dd>
     </div>
   )
 }

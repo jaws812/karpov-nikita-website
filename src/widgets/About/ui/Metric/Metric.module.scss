@@ -1,0 +1,29 @@
+.item {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+
+  @include mobile {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.value {
+  @include fluid-text(96, 60);
+
+  font-family: var(--font-family-manrope), sans-serif;
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -3.8px;
+  color: var(--color-green-1);
+}
+
+.valueSubtitle {
+  font-size: fluid-to-laptop(24, 20);
+  font-family: var(--font-family-manrope), sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--color-light);
+  margin-top: fluid(24, 12);
+}

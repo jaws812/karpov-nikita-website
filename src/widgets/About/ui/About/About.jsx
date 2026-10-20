@@ -1,4 +1,4 @@
-import './About.scss'
+import css from './About.module.scss'
 import Section from '@/shared/ui/Section'
 import { infoItems } from '../../model/infoItems'
 import { metricItems } from '../../model/metricItems'
@@ -11,9 +11,9 @@ const About = () => {
       title='Разрабатываю сайты на HTML, CSS и JS, работаю на разных CMS'
       id='about'
     >
-      <div className='about'>
-        <div className='about__info'>
-          <div className='about__description'>
+      <div className={css.about}>
+        <div className={css.info}>
+          <div>
             <p>
               Закончил ПГУТИ в Самаре — направление «Информатика и
               вычислительная техника». Год с лишним работаю в веб-студии:
@@ -27,19 +27,19 @@ const About = () => {
               сайтов на React.
             </p>
           </div>
-          <div className='about__badge'>
-            <ul className='about__list'>
+          <div className={css.badge}>
+            <ul className={css.list}>
               {infoItems.map(({ title, description }) => (
-                <li className='about__item' key={title}>
-                  <div className='about__item-title'>{title}</div>
-                  <div className='about__item-description'>{description}</div>
+                <li className={css.item} key={title}>
+                  <div>{title}</div>
+                  <div className={css.itemDescription}>{description}</div>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-        <div className='about__metric metric'>
-          <dl className='metric__list'>
+        <div className={css.metric}>
+          <dl className={css.metricList}>
             {metricItems.map((metricItem) => (
               <MetricCard {...metricItem} key={metricItem.title} />
             ))}
