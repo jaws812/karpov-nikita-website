@@ -1,0 +1,23 @@
+.experienceCard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.timeline {
+  font-size: 14px;
+  color: var(--color-green-1);
+}
+
+.title,
+.organization {
+  margin-top: 4px;
+}
+
+.description {
+  margin-top: 8px;
+
+  @include tablet-above {
+    max-width: 820px;
+  }
+}

@@ -1,16 +1,16 @@
-import './StackCard.scss'
+import css from './StackCard.module.scss'
 
 const StackCard = (props) => {
   const { title, property } = props
 
   return (
-    <div className='stack-card'>
-      <div className='stack-card__title'>{title}</div>
-      <ul className='stack-card__list'>
+    <div className={css.stackCard}>
+      <div className={css.title}>{title}</div>
+      <ul>
         {property.map(({ title, description }) => (
-          <li className='stack-card__item' key={title}>
-            <div className='stack-card__item-title'>{title}</div>
-            <div className='stack-card__item-description'>{description}</div>
+          <li className={css.item} key={title}>
+            <div className={css.itemTitle}>{title}</div>
+            <div className={css.itemDescription}>{description}</div>
           </li>
         ))}
       </ul>
