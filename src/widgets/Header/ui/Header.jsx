@@ -8,11 +8,11 @@ import css from './Header.module.scss'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const onClick = () => {
-    setIsOpen(!isOpen)
+  const toggleMenu = () => {
+    setIsOpen((prev) => !prev)
   }
 
-  const hideMenu = () => {
+  const closeMenu = () => {
     setIsOpen(false)
   }
 
@@ -23,6 +23,20 @@ const Header = () => {
       document.documentElement.classList.remove('is-lock')
     }
   }, [isOpen])
+
+  useEffect(() => {
+    const laptopAboveQuery = window.matchMedia('(width > 1440px)')
+    const handleBreakpointChange = (event) => {
+      if (event.matches) {
+        setIsOpen(false)
+      }
+    }
+    laptopAboveQuery.addEventListener('change', handleBreakpointChange)
+
+    return () => {
+      laptopAboveQuery.removeEventListener('change', handleBreakpointChange)
+    }
+  }, [])
 
   return (
     <header className={css.header}>
@@ -39,7 +53,7 @@ const Header = () => {
                   <a
                     className={css.headerMenuLink}
                     href={href}
-                    onClick={hideMenu}
+                    onClick={closeMenu}
                   >
                     {label}
                   </a>
@@ -55,7 +69,7 @@ const Header = () => {
             </Button>
           </div>
         </div>
-        <BurgerButton onClick={onClick} isActive={isOpen} />
+        <BurgerButton onClick={toggleMenu} isActive={isOpen} />
       </div>
     </header>
   )
