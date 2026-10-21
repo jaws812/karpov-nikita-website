@@ -1,8 +1,4 @@
 html {
-  *:focus {
-    outline-color: var(--color-black);
-  }
-
   &.is-lock {
     overflow: hidden;
   }
@@ -34,6 +30,11 @@ main {
 
 .section {
   padding-block: fluid(128, 64);
+  scroll-margin-top: 80px;
+
+  @include mobile {
+    scroll-margin-top: 60px;
+  }
 
   &:nth-child(2n) {
     background-color: var(--color-dark-2);
