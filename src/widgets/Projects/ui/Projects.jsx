@@ -21,7 +21,7 @@ const Projects = () => {
           width='24px'
           height='24px'
         >
-          <g id='Outlined'>
+          <g>
             <path
               style={{
                 fill: 'none',

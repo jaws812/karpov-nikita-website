@@ -10,13 +10,11 @@ const Work = () => {
       stepTitle='05 &bull; Как я работаю'
       id='work'
     >
-      <div className='work'>
-        <Grid columns={4}>
-          {workSteps.map((workStep, index) => (
-            <WorkCard {...workStep} index={index} key={workStep.title} />
-          ))}
-        </Grid>
-      </div>
+      <Grid columns={4}>
+        {workSteps.map((workStep, index) => (
+          <WorkCard {...workStep} index={index} key={workStep.title} />
+        ))}
+      </Grid>
     </Section>
   )
 }
