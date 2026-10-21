@@ -5,17 +5,19 @@
   color: var(--glow-text);
   transition: color var(--transition-duration) ease;
 
-  &:hover {
+  @include hover {
     background-color: var(--glow-bg);
-    color: var(--glow-text);
+    color: var(--glow-text-hover);
+
+    .glow {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
   }
-}
 
-.active {
-  color: var(--glow-text-hover);
-
-  .glow {
-    transform: translate(-50%, -50%) scale(1.2);
+  svg {
+    @include mobile {
+      @include visually-hidden;
+    }
   }
 }
 
@@ -23,12 +25,6 @@
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
-}
-
-svg {
-  @include mobile {
-    @include visually-hidden;
-  }
 }
 
 .glow {

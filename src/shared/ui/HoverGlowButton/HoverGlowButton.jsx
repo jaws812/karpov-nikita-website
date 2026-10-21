@@ -1,5 +1,5 @@
 import css from './HoverGlowButton.module.scss'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import Button from '@/shared/ui/Button'
 import clsx from 'clsx'
 
@@ -21,19 +21,14 @@ const HoverGlowButton = (props) => {
   } = props
 
   const ref = useRef(null)
-  const [pos, setPos] = useState({ x: 0, y: 0 })
-  const [isHovered, setIsHovered] = useState(false)
 
   const handleMouseMove = (e) => {
-    const el = ref.current
-    if (!el) {
+    if (!ref.current) {
       return
     }
-    const rect = el.getBoundingClientRect()
-    setPos({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-    })
+    const rect = ref.current.getBoundingClientRect()
+    ref.current.style.setProperty('--glow-x', `${e.clientX - rect.left}px`)
+    ref.current.style.setProperty('--glow-y', `${e.clientY - rect.top}px`)
   }
 
   const styleVars = {
@@ -41,16 +36,11 @@ const HoverGlowButton = (props) => {
     '--glow-bg': backgroundColor,
     '--glow-text': textColor,
     '--glow-text-hover': hoverTextColor,
-    '--glow-x': `${pos.x}px`,
-    '--glow-y': `${pos.y}px`,
   }
 
   return (
     <Button
-      className={clsx(className, css.hoverGlowButton, {
-        [css.active]: isHovered,
-        [css.disabled]: disabled,
-      })}
+      className={clsx(className, css.hoverGlowButton, disabled && css.disabled)}
       type={type}
       href={href}
       target={target}
@@ -60,8 +50,6 @@ const HoverGlowButton = (props) => {
       disabled={disabled}
       onClick={onClick}
       onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       {...rest}
     >
       <span className={css.glow} aria-hidden='true' />
