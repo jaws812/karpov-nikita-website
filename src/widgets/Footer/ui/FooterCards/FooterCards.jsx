@@ -32,6 +32,8 @@ const FooterCards = () => {
                 {...accentCard}
                 href={contacts[accentCard.linkType].link}
                 srcIcon={contacts[accentCard.linkType].srcIcon}
+                widthIcon={contacts[accentCard.linkType].widthIcon}
+                heightIcon={contacts[accentCard.linkType].heightIcon}
               />
             )}
             {otherCards.length > 0 && (
@@ -42,6 +44,8 @@ const FooterCards = () => {
                       {...item}
                       href={contacts[item.linkType].link}
                       srcIcon={contacts[item.linkType].srcIcon}
+                      widthIcon={contacts[item.linkType].widthIcon}
+                      heightIcon={contacts[item.linkType].heightIcon}
                       key={item.title}
                     />
                   )

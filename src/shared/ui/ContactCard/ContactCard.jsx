@@ -2,7 +2,8 @@ import css from './ContactCard.module.scss'
 import clsx from 'clsx'
 
 const ContactCard = (props) => {
-  const { subtitle, title, isAccent, href, srcIcon } = props
+  const { subtitle, title, isAccent, href, srcIcon, widthIcon, heightIcon } =
+    props
 
   return (
     <a
@@ -16,8 +17,8 @@ const ContactCard = (props) => {
           className={css.image}
           src={srcIcon}
           alt=''
-          width=''
-          height=''
+          width={widthIcon}
+          height={heightIcon}
           loading='lazy'
         />
         <svg

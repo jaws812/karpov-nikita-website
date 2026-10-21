@@ -7,7 +7,7 @@ import { Work } from '@/widgets/Work'
 
 const Main = () => {
   return (
-    <main className='main'>
+    <main>
       <Hero />
       <About />
       <Stack />

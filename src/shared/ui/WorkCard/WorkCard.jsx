@@ -8,7 +8,7 @@ const WorkCard = (props) => {
       <div className={css.counter}>
         {(index + 1).toString().padStart(2, '0')}
       </div>
-      <h3 className='work-card__title'>{title}</h3>
+      <h3 className={css.title}>{title}</h3>
       <div className={css.description}>{description}</div>
     </div>
   )
