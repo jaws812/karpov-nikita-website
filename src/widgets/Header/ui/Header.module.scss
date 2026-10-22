@@ -80,13 +80,13 @@
   }
 }
 
-.headerLogo {
+.logo {
   @include mobile-s {
     @include visually-hidden;
   }
 }
 
-.headerMenu {
+.menu {
   @include laptop {
     display: flex;
     justify-content: center;
@@ -95,7 +95,7 @@
   }
 }
 
-.headerMenuList {
+.menuList {
   display: flex;
   align-items: center;
   gap: 4px;
@@ -107,7 +107,7 @@
   }
 }
 
-.headerMenuLink {
+.menuLink {
   padding: 8px 10px;
   color: var(--color-gray);
 
@@ -120,7 +120,7 @@
   }
 }
 
-.headerName {
+.name {
   font-family: var(--font-family-manrope), sans-serif;
   font-size: 18px;
   font-weight: 700;

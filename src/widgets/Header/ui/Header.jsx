@@ -42,19 +42,15 @@ const Header = () => {
     <header className={css.header}>
       <div className={`${css.wrapper} container`}>
         <div className={css.info}>
-          <Logo className={css.headerLogo} />
-          <div className={css.headerName}>Никита Карпов</div>
+          <Logo className={css.logo} />
+          <div className={css.name}>Никита Карпов</div>
         </div>
         <dialog className={css.overlayMenuDialog} open={isOpen}>
-          <nav className={css.headerMenu}>
-            <ul className={css.headerMenuList}>
+          <nav className={css.menu}>
+            <ul className={css.menuList}>
               {menu.map(({ label, href }) => (
                 <li key={href}>
-                  <a
-                    className={css.headerMenuLink}
-                    href={href}
-                    onClick={closeMenu}
-                  >
+                  <a className={css.menuLink} href={href} onClick={closeMenu}>
                     {label}
                   </a>
                 </li>
