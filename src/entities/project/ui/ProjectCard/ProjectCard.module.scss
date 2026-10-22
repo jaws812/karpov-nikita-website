@@ -1,6 +1,7 @@
 .projectCard {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .header {
@@ -17,12 +18,25 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  justify-content: space-between;
+  gap: fluid(20, 16);
+  height: 100%;
   border: var(--border);
-  border-radius: 0 var(--border-radius-md) var(--border-radius-md)
-    var(--border-radius-md);
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md) var(--border-radius-md);
   background-color: var(--color-dark-3);
   padding: fluid(32, 24);
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .counter {
@@ -33,24 +47,65 @@
 .title {
   @include fluid-text(30, 24);
 
+  line-height: 1.36;
   margin-top: 2px;
-  color: var(--color-light);
-  font-weight: 700;
 }
 
-.description {
+.descriptionList {
   margin-top: 9px;
+  padding-left: 20px;
+  list-style-type: disc;
 }
 
 .list {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-top: fluid(14, 10);
+  flex-wrap: wrap;
 }
 
 .item {
   padding: 4px 10px;
   background-color: var(--color-dark-7);
   border-radius: var(--border-radius-sm);
+}
+
+.note {
+  margin-top: 5px;
+  font-size: 14px;
+  padding-left: 10px;
+  border-left: 2px solid var(--color-green-3);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  align-self: start;
+  gap: 5px;
+  font-size: 14px;
+  color: var(--color-green-1);
+
+  svg {
+    width: 16px;
+    transition-duration: var(--transition-duration);
+  }
+
+  @include hover {
+    color: var(--color-light);
+
+    svg {
+      translate: 2px -2px;
+    }
+  }
+}
+
+.linksWrapper {
+  padding-top: 14px;
+  margin-top: 8px;
+  border-top: var(--border);
+}
+
+.onRequest {
+  font-size: 14px;
+  margin-top: 5px;
 }

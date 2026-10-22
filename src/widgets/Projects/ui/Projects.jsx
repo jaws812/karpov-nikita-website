@@ -55,7 +55,7 @@ const Projects = () => {
           </g>
         </svg>
       </HoverGlowButton>
-      <Grid gap='md'>
+      <Grid gap='md' isFirstWide>
         {projectItems.map((item, index) => (
           <ProjectCard {...item} index={index} key={item.title} />
         ))}
