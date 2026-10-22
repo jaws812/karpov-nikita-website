@@ -3,12 +3,28 @@ import clsx from 'clsx'
 
 const gapClasses = { md: css.mdGap, lg: css.lgGap }
 const columnsClasses = { 2: css.grid2, 4: css.grid4 }
+const collapseClasses = {
+  mobileS: css.collapseMobileS,
+}
 
 const Grid = (props) => {
-  const { children, columns = 2, gap, isFirstWide } = props
+  const {
+    children,
+    columns = 2,
+    gap,
+    isFirstWide,
+    collapseAt = 'tablet',
+  } = props
 
   return (
-    <ul className={clsx(css.grid, gapClasses[gap], columnsClasses[columns])}>
+    <ul
+      className={clsx(
+        css.grid,
+        gapClasses[gap],
+        columnsClasses[columns],
+        collapseClasses[collapseAt],
+      )}
+    >
       {children?.map((child, index) => (
         <li
           className={clsx(

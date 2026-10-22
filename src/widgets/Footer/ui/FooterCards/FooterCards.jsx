@@ -37,7 +37,7 @@ const FooterCards = () => {
               />
             )}
             {otherCards.length > 0 && (
-              <Grid isFirstWide>
+              <Grid isFirstWide collapseAt='mobileS'>
                 {otherCards.map((item) => {
                   return (
                     <ContactCard
