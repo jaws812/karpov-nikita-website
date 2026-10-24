@@ -37,7 +37,7 @@ export const stackItems = [
       },
       {
         title: 'React',
-        description: 'в процессе',
+        description: 'хуки, контекст, FSD',
       },
     ],
   },
@@ -54,7 +54,7 @@ export const stackItems = [
       },
       {
         title: 'CMS',
-        description: 'верстка и натягивание сайтов на CMS',
+        description: 'Diafan, WordPress, 1С-Битрикс',
       },
       {
         title: 'Хостинг',

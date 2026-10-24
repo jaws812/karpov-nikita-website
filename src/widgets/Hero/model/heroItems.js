@@ -1,1 +1,1 @@
-export const toolsItems = ['React', 'Git & GitHub', 'Figma', 'Web Storm']
+export const toolsItems = ['React', 'JavaScript', 'HTML / SCSS', 'Git', 'Figma']

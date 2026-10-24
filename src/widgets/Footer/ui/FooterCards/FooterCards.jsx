@@ -23,7 +23,7 @@ const FooterCards = () => {
             Контакты
           </h2>
           <div className={css.description}>
-            Работаю с React. Открыт к офису в Самаре и к удалёнке.
+            Удобнее всего написать в Telegram.
           </div>
           <Grid>
             {accentCard && (

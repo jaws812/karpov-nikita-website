@@ -12,19 +12,19 @@ const Hero = () => {
         <div className={css.hero}>
           <h1 className={css.title} id='hero-title'>
             Карпов Никита{' '}
-            <span className={css.titleAccent}>frontend-разработчик</span>{' '}
-            и&nbsp;верстальщик
+            <span className={css.titleAccent}>frontend-разработчик</span>
           </h1>
           <div className={css.description}>
-            Верстаю корпоративные сайты и лендинги по современным стандартам,
-            работаю с разными CMS и понимаю, как сайт устроен целиком: хостинг,
-            домен, PHP и база данных.
+            Делаю коммерческие сайты: верстка по макетам, адаптив, интеграция в
+            CMS, ускорение загрузки. На React пишу собственные проекты — этот
+            сайт один из них.
           </div>
           <div className={css.subtitle}>
-            Изучаю React и имею опыт работы с разработкой коммерческих сайтов.
+            Понимаю, как сайт устроен целиком: от макета в Figma до хостинга,
+            домена и сервера.
           </div>
           <div className={css.location}>
-            Россия, Самара &bull; офис или удалённо
+            Россия, Самара &bull; офис или удаленно
           </div>
           <div className={css.actions}>
             <Button

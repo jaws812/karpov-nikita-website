@@ -5,7 +5,7 @@ export const infoItems = [
   },
   {
     title: 'Формат',
-    description: 'офис / удалённо',
+    description: 'офис / удаленно',
   },
   {
     title: 'Образование',
@@ -13,10 +13,14 @@ export const infoItems = [
   },
   {
     title: 'Сейчас',
-    description: 'Фронтенд-разработчик сайтов на CMS',
+    description: 'frontend-разработчик в веб-студии',
+  },
+  {
+    title: 'Английский',
+    description: 'B1',
   },
   {
     title: 'Учу',
-    description: 'React, TypeScript',
+    description: 'TypeScript',
   },
 ]

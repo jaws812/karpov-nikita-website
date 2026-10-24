@@ -11,7 +11,7 @@ export const cardItems = [
   },
   {
     subtitle: 'Резюме',
-    title: 'Download',
+    title: 'karpov-resume.pdf',
     linkType: 'document',
   },
   {

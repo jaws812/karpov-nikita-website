@@ -2,7 +2,7 @@ export const metricItems = [
   {
     title: '1+',
     subtitle: 'год',
-    description: 'разработки сайтов на CMS и вёрстки',
+    description: 'коммерческой разработки',
   },
   {
     title: '50+',
@@ -10,8 +10,8 @@ export const metricItems = [
     description: 'лендинги, сайты услуг, правки на живых проектах',
   },
   {
-    title: '2024',
-    subtitle: 'ПГУТИ',
-    description: 'бакалавр, информатика и вычислительная техника',
+    title: '1—5 с',
+    subtitle: 'быстрее загрузка',
+    description: 'ускорил около 10 сайтов: изображения, шрифты, lazy load, кэш',
   },
 ]
