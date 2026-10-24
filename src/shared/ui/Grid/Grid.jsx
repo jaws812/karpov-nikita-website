@@ -8,13 +8,7 @@ const collapseClasses = {
 }
 
 const Grid = (props) => {
-  const {
-    children,
-    columns = 2,
-    gap,
-    isFirstWide,
-    collapseAt = 'tablet',
-  } = props
+  const { children, columns = 2, gap, isFirstWide, collapseAt } = props
 
   return (
     <ul

@@ -22,7 +22,8 @@
   gap: fluid(20, 16);
   height: 100%;
   border: var(--border);
-  border-radius: 0 var(--border-radius-md) var(--border-radius-md) var(--border-radius-md);
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md)
+    var(--border-radius-md);
   background-color: var(--color-dark-3);
   padding: fluid(32, 24);
 }
