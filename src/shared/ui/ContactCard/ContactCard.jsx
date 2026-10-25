@@ -1,5 +1,6 @@
 import css from './ContactCard.module.scss'
 import clsx from 'clsx'
+import Icon from '@/shared/ui/Icon'
 
 const ContactCard = (props) => {
   const { subtitle, title, isAccent, href, srcIcon, widthIcon, heightIcon } =
@@ -51,20 +52,7 @@ const ContactCard = (props) => {
         {isAccent && (
           <div className={css.extra}>
             Написать в Telegram
-            <svg
-              width='25'
-              height='25'
-              viewBox='0 0 24 24'
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              stroke='#000000'
-              strokeWidth='1'
-              strokeLinecap='round'
-              strokeLinejoin='miter'
-            >
-              <polyline points='13 17 18 12 13 7'></polyline>
-              <line x1='6' y1='12' x2='18' y2='12'></line>
-            </svg>
+            <Icon name='arrowRight' />
           </div>
         )}
       </div>
