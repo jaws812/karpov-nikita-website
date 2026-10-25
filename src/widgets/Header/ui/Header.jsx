@@ -42,7 +42,7 @@ const Header = () => {
     <header className={css.header}>
       <div className={`${css.wrapper} container`}>
         <div className={css.info}>
-          <Logo className={css.logo} />
+          <Logo />
           <div className={css.name}>Никита Карпов</div>
         </div>
         <dialog className={css.overlayMenuDialog} open={isOpen}>

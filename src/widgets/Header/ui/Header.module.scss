@@ -80,12 +80,6 @@
   }
 }
 
-.logo {
-  @include mobile-s {
-    @include visually-hidden;
-  }
-}
-
 .menu {
   @include laptop {
     display: flex;
@@ -125,4 +119,8 @@
   font-size: 18px;
   font-weight: 700;
   color: var(--color-light);
+
+  @include mobile-s {
+    @include visually-hidden;
+  }
 }
