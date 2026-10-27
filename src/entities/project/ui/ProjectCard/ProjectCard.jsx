@@ -1,5 +1,6 @@
 import css from './ProjectCard.module.scss'
 import Icon from '@/shared/ui/Icon'
+import { counter } from '@/shared/lib/counter'
 
 const ProjectCard = (props) => {
   const { type, year, title, description, tools, note, links, index } = props
@@ -11,9 +12,7 @@ const ProjectCard = (props) => {
       </header>
       <div className={css.wrapper}>
         <div className={css.top}>
-          <div className={css.counter}>
-            {(index + 1).toString().padStart(2, '0')}
-          </div>
+          <div className={css.counter}>{counter(index)}</div>
           <h3 className={css.title}>{title}</h3>
           <ul className={css.descriptionList}>
             {description.map((item) => (
