@@ -10,6 +10,12 @@
   }
 }
 
+.itemDetail{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+}
+
 .value {
   @include fluid-text(96, 60);
 
