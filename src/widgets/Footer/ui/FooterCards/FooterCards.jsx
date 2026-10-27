@@ -5,6 +5,7 @@ import Grid from '@/shared/ui/Grid'
 import ContactCard from '@/shared/ui/ContactCard'
 import css from './FooterCards.module.scss'
 import clsx from 'clsx'
+import TiltCard from '@/shared/ui/TiltCard'
 
 const FooterCards = () => {
   const accentCard = cardItems[0]
@@ -27,14 +28,16 @@ const FooterCards = () => {
           </div>
           <Grid>
             {accentCard && (
-              <ContactCard
-                isAccent
-                {...accentCard}
-                href={contacts[accentCard.linkType].link}
-                srcIcon={contacts[accentCard.linkType].srcIcon}
-                widthIcon={contacts[accentCard.linkType].widthIcon}
-                heightIcon={contacts[accentCard.linkType].heightIcon}
-              />
+              <TiltCard>
+                <ContactCard
+                  isAccent
+                  {...accentCard}
+                  href={contacts[accentCard.linkType].link}
+                  srcIcon={contacts[accentCard.linkType].srcIcon}
+                  widthIcon={contacts[accentCard.linkType].widthIcon}
+                  heightIcon={contacts[accentCard.linkType].heightIcon}
+                />
+              </TiltCard>
             )}
             {otherCards.length > 0 && (
               <Grid isFirstWide collapseAt='mobileS'>
