@@ -1,16 +1,51 @@
-# React + Vite
+# karpov-nikita-website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Личный сайт frontend-разработчика: обо мне, стек, опыт работы и проекты.
 
-Currently, two official plugins are available:
+## Стек
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19, Vite
+- SCSS + CSS Modules
+- Архитектура Feature-Sliced Design (FSD)
+- ESLint, Stylelint, Prettier
 
-## React Compiler
+## Что интересного в коде
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **FSD и импорты только вниз.** Слой импортирует только из слоев ниже, а слайс отдает наружу только то, что экспортировано из его `index.js`. Модули не зависят от внутреннего устройства друг друга.
+- **Эффекты за курсором без перерисовок.** Подсветка кнопки `HoverGlowButton` и наклон карточки записывают координаты мыши в CSS-переменные через `ref`, а не в состояние React. Компонент не перерисовывается при каждом движении мыши.
+- **Мобильное меню.** Пока меню открыто, прокрутка страницы заблокирована. При расширении экрана до десктопа меню закрывается само: подписка на `matchMedia` в `useEffect` с отпиской при размонтировании.
+- **Компонент `Icon`.** Рамка `<svg>` общая, рисунки иконок хранятся в объекте и выбираются по имени. Цвет наследуется от текста через `currentColor`.
 
-## Expanding the ESLint configuration
+## Запуск
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Нужен Node.js 20.19+ или 22.12+.
+
+```bash
+npm ci            # установить зависимости
+npm run dev       # запустить dev-сервер
+npm run build     # собрать проект в папку dist/
+npm run preview   # открыть собранную версию локально
+npm run lint      # ESLint + Stylelint + проверка Prettier
+npm run lint:fix  # исправить то, что линтеры могут исправить сами
+```
+
+## Структура
+
+Точка входа — `src/main.jsx`.
+
+| Слой       | Что лежит                                                                                |
+| ---------- | ---------------------------------------------------------------------------------------- |
+| `app`      | корневой компонент `App.jsx` и глобальные стили                                          |
+| `pages`    | страницы, собранные из виджетов (сейчас одна — главная)                                  |
+| `widgets`  | секции страницы: шапка, Hero, обо мне, стек, опыт, работы, футер                         |
+| `entities` | сущности: опыт, проект, стек — данные и карточки для них                                 |
+| `shared`   | переиспользуемые компоненты, конфиг, утилиты и ресурсы без привязки к предметной области |
+
+## Деплой
+
+Сайт развернут на собственном VDS (Ubuntu 24.04):
+
+- nginx раздает статическую сборку;
+- HTTPS через Let's Encrypt с автопродлением;
+- gzip-сжатие и кеширование: файлы из `assets/` с хешем в имени кешируются на год, `index.html` — без кеша, чтобы новая версия подхватывалась сразу;
+- обновление одним bash-скриптом: `git pull` → `npm ci` → `npm run build` → `rsync` сборки в папку сайта.
