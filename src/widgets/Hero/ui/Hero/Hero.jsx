@@ -1,14 +1,19 @@
 import css from './Hero.module.scss'
 import Button from '@/shared/ui/Button'
 import HoverGlowButton from '@/shared/ui/HoverGlowButton'
-import { toolsItems } from '../model/heroItems'
+import { toolsItems } from '../../model/heroItems'
 import { contacts } from '@/shared/config/contacts'
 import clsx from 'clsx'
 import Icon from '@/shared/ui/Icon'
+import HeroBackground from '@/widgets/Hero/ui/HeroBackground/HeroBackground'
 
 const Hero = () => {
   return (
-    <section className='section' aria-labelledby='hero-title'>
+    <section
+      className={clsx('section', css.section)}
+      aria-labelledby='hero-title'
+    >
+      <HeroBackground />
       <div className='container'>
         <div className={css.hero}>
           <h1 className={css.title} id='hero-title'>

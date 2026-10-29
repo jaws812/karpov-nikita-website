@@ -1,0 +1,78 @@
+.background {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+
+  --cx: 75%;
+  --cy: 50%;
+
+  @include laptop {
+    --cx: 85%;
+    opacity: 0.7;
+  }
+
+  @include mobile {
+    --cx: 90%;
+    --cy: 30%;
+    opacity: 0.6;
+  }
+}
+
+.space {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  perspective: 520px;
+  mask-image: radial-gradient(
+    ellipse 70% 100% at var(--cx) var(--cy),
+    #000 25%,
+    transparent 85%
+  );
+}
+
+.star {
+  position: absolute;
+  background: var(--color);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  color: var(--color);
+  box-shadow: 0 0 6px var(--color);
+  opacity: 0;
+  animation: warp var(--duration) linear var(--delay) infinite;
+}
+
+.links {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  line {
+    stroke: url(#starGradient);
+    stroke-width: 1;
+    opacity: 0;
+  }
+}
+
+.paused .star {
+  animation-play-state: paused;
+}
+
+@keyframes warp {
+  0% {
+    transform: translateZ(var(--z-from));
+    opacity: 0;
+  }
+
+  20%,
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateZ(var(--z-to));
+    opacity: 0;
+  }
+}
