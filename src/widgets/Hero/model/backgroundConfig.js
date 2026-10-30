@@ -1,4 +1,4 @@
-export const backgroundConfig = {
+export const config = {
   count: 150,
   countMobile: 70,
   sizeMin: 1,

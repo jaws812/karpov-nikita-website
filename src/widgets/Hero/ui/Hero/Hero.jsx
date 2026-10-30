@@ -5,7 +5,7 @@ import { toolsItems } from '../../model/heroItems'
 import { contacts } from '@/shared/config/contacts'
 import clsx from 'clsx'
 import Icon from '@/shared/ui/Icon'
-import HeroBackground from '@/widgets/Hero/ui/HeroBackground/HeroBackground'
+import HeroBackground from '../HeroBackground/HeroBackground'
 
 const Hero = () => {
   return (
