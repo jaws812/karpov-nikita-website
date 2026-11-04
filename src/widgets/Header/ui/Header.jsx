@@ -43,20 +43,31 @@ const Header = () => {
         setIsOpen(false)
       }
     }
+    laptopAboveQuery.addEventListener('change', handleBreakpointChange)
+
+    return () => {
+      laptopAboveQuery.removeEventListener('change', handleBreakpointChange)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!isOpen) {
+      return
+    }
+
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
         setIsOpen(false)
         burgerRef.current?.focus()
       }
     }
-    laptopAboveQuery.addEventListener('change', handleBreakpointChange)
+
     document.addEventListener('keydown', handleKeyDown)
 
     return () => {
-      laptopAboveQuery.removeEventListener('change', handleBreakpointChange)
       document.removeEventListener('keydown', handleKeyDown)
     }
-  }, [])
+  }, [isOpen])
 
   return (
     <header className={css.header}>

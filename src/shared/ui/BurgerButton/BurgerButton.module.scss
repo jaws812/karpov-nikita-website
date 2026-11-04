@@ -19,7 +19,7 @@
   }
 
   @include laptop-above {
-    @include visually-hidden;
+    display: none;
   }
 }
 
