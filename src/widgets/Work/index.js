@@ -1,1 +1,1 @@
-export { default as Work } from './ui/Work'
+export { default } from './ui/Work'
