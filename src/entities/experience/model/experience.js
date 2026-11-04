@@ -2,7 +2,7 @@ export const experienceItems = [
   {
     timeline: 'Август 2025 — настоящее время',
     title: 'Frontend-разработчик',
-    organization: 'ASM FORWARD MEDIA',
+    organization: 'Веб-студия, Самара',
     description:
       'Сверстал и интегрировал в CMS 4–5 новых сайтов по макетам из Figma. Ускорил загрузку около 10 сайтов на 1–5 секунд. Дорабатываю SPA на Vue с headless CMS Directus. Поддерживаю 50+ сайтов клиентов на Diafan, WordPress и 1С-Битрикс.',
   },
