@@ -2,7 +2,7 @@ import css from './BurgerButton.module.scss'
 import clsx from 'clsx'
 
 const BurgerButton = (props) => {
-  const { className, onClick, isActive } = props
+  const { className, onClick, isActive, ref } = props
 
   const title = isActive ? 'Закрыть меню' : 'Открыть меню'
 
@@ -14,6 +14,7 @@ const BurgerButton = (props) => {
       aria-label={title}
       aria-expanded={isActive}
       onClick={onClick}
+      ref={ref}
     >
       <span className={css.line}></span>
       <span className={css.line}></span>

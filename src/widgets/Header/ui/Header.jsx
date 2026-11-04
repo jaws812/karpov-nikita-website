@@ -1,13 +1,15 @@
 import Button from '@/shared/ui/Button'
 import Logo from '@/shared/ui/Logo'
 import BurgerButton from '@/shared/ui/BurgerButton'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { menu } from '@/shared/config/menu'
 import { contacts } from '@/shared/config/contacts'
 import css from './Header.module.scss'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const burgerRef = useRef(null)
+  const menuRef = useRef(null)
   const toggleMenu = () => {
     setIsOpen((prev) => !prev)
   }
@@ -17,10 +19,20 @@ const Header = () => {
   }
 
   useEffect(() => {
+    const main = document.querySelector('main')
+    const footer = document.querySelector('footer')
     document.documentElement.classList.toggle('is-lock', isOpen)
+    main?.toggleAttribute('inert', isOpen)
+    footer?.toggleAttribute('inert', isOpen)
+
+    if (isOpen) {
+      menuRef.current?.querySelector('a')?.focus()
+    }
 
     return () => {
       document.documentElement.classList.remove('is-lock')
+      main?.removeAttribute('inert')
+      footer?.removeAttribute('inert')
     }
   }, [isOpen])
 
@@ -31,22 +43,30 @@ const Header = () => {
         setIsOpen(false)
       }
     }
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false)
+        burgerRef.current?.focus()
+      }
+    }
     laptopAboveQuery.addEventListener('change', handleBreakpointChange)
+    document.addEventListener('keydown', handleKeyDown)
 
     return () => {
       laptopAboveQuery.removeEventListener('change', handleBreakpointChange)
+      document.removeEventListener('keydown', handleKeyDown)
     }
   }, [])
 
   return (
     <header className={css.header}>
       <div className={`${css.wrapper} container`}>
-        <div className={css.info}>
+        <div className={css.info} inert={isOpen}>
           <Logo />
           <div className={css.name}>Никита Карпов</div>
         </div>
         <dialog className={css.overlayMenuDialog} open={isOpen}>
-          <nav className={css.menu}>
+          <nav className={css.menu} ref={menuRef}>
             <ul className={css.menuList}>
               {menu.map(({ label, href }) => (
                 <li key={href}>
@@ -65,7 +85,7 @@ const Header = () => {
             </Button>
           </div>
         </div>
-        <BurgerButton onClick={toggleMenu} isActive={isOpen} />
+        <BurgerButton onClick={toggleMenu} isActive={isOpen} ref={burgerRef} />
       </div>
     </header>
   )
