@@ -15,8 +15,17 @@
 }
 
 .accent {
+  color: var(--color-black);
   background-color: var(--color-green-1);
   border: var(--border-green);
+
+  @include hover {
+    color: var(--color-light);
+
+    .subtitle {
+      color: var(--color-light);
+    }
+  }
 
   .headerIcon {
     width: fluid(40, 32);
@@ -28,6 +37,7 @@
 
     color: var(--color-green-4);
     letter-spacing: 3.6px;
+    transition-duration: var(--transition-duration);
   }
 
   .bottom {

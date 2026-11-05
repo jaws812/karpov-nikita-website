@@ -3,8 +3,7 @@ import clsx from 'clsx'
 import Icon from '@/shared/ui/Icon'
 
 const ContactCard = (props) => {
-  const { subtitle, title, isAccent, href, srcIcon, widthIcon, heightIcon } =
-    props
+  const { subtitle, title, isAccent, href, name, size, viewBox } = props
 
   return (
     <a
@@ -14,37 +13,8 @@ const ContactCard = (props) => {
       rel='noreferrer'
     >
       <div className={css.header}>
-        <img
-          className={css.image}
-          src={srcIcon}
-          alt=''
-          width={widthIcon}
-          height={heightIcon}
-          loading='lazy'
-        />
-        <svg
-          className={css.headerIcon}
-          width='40'
-          height='40'
-          viewBox='0 0 40 40'
-          fill='none'
-          xmlns='http://www.w3.org/2000/svg'
-        >
-          <path
-            d='M11.6667 11.6667H28.3334V28.3334'
-            stroke='#0A140E'
-            strokeWidth='3.33333'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          />
-          <path
-            d='M11.6667 28.3334L28.3334 11.6667'
-            stroke='#0A140E'
-            strokeWidth='3.33333'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          />
-        </svg>
+        <Icon name={name} size={size} viewBox={viewBox} />
+        <Icon name='arrowRightCard' size={40} viewBox='0 0 40 40' />
       </div>
       <div className={css.bottom}>
         <div className={css.subtitle}>{subtitle}</div>
