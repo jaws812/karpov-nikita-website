@@ -1,34 +1,91 @@
+@mixin raised {
+  translate: -3px -3px;
+  box-shadow: var(--box-shadow);
+  border-color: var(--color-green-1);
+}
+
 .contactCard {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 32px;
   padding: fluid(33, 25);
+  color: var(--color-gray);
   background-color: var(--color-dark-3);
   border: var(--border);
   border-radius: var(--border-radius-md);
   height: 100%;
+  transition-property: translate, box-shadow, border-color, background-color;
+  transition-duration: var(--transition-duration);
+
+  &:focus-visible {
+    @include raised;
+  }
 
   @include mobile {
     gap: 46px;
   }
+
+  @include hover {
+    @include raised;
+
+    color: var(--color-gray);
+
+    .icon,
+    .arrow {
+      color: var(--color-green-1);
+    }
+
+    .arrow {
+      translate: 4px -4px;
+    }
+  }
+}
+
+.icon,
+.arrow {
+  height: auto;
+  transition-property: color, translate;
+  transition-duration: var(--transition-duration);
+}
+
+.arrow {
+  width: fluid(40, 32);
+}
+
+.extra svg {
+  transition-duration: var(--transition-duration);
 }
 
 .accent {
-  color: var(--color-black);
+  color: var(--color-green-4);
   background-color: var(--color-green-1);
   border: var(--border-green);
 
-  @include hover {
-    color: var(--color-light);
+  &:focus-visible {
+    translate: none;
+    box-shadow: none;
+  }
 
-    .subtitle {
-      color: var(--color-light);
+  @include hover {
+    color: var(--color-green-4);
+    border-color: var(--color-green-2);
+    background-color: var(--color-green-2);
+    translate: none;
+    box-shadow: none;
+
+    .icon,
+    .arrow {
+      color: var(--color-green-4);
+    }
+
+    .extra svg {
+      translate: 4px 0;
     }
   }
 
-  .headerIcon {
-    width: fluid(40, 32);
+  .arrow {
+    height: auto;
     color: var(--color-green-4);
   }
 
@@ -37,7 +94,6 @@
 
     color: var(--color-green-4);
     letter-spacing: 3.6px;
-    transition-duration: var(--transition-duration);
   }
 
   .bottom {
@@ -62,8 +118,9 @@
     }
   }
 
-  .image {
+  .icon {
     width: fluid(56, 40);
+    height: auto;
   }
 }
 
@@ -89,6 +146,7 @@
   @include fluid-text(30, 20);
 
   font-family: var(--font-family-grotesk), sans-serif;
+  color: var(--color-light);
 }
 
 .extra {

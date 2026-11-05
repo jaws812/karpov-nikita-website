@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import Icon from '@/shared/ui/Icon'
 
 const ContactCard = (props) => {
-  const { subtitle, title, isAccent, href, name, size, viewBox } = props
+  const { subtitle, title, isAccent, href, name, size } = props
 
   return (
     <a
@@ -13,8 +13,8 @@ const ContactCard = (props) => {
       rel='noreferrer'
     >
       <div className={css.header}>
-        <Icon name={name} size={size} viewBox={viewBox} />
-        <Icon name='arrowRightCard' size={40} viewBox='0 0 40 40' />
+        <Icon className={css.icon} name={name} size={size} />
+        <Icon className={css.arrow} name='arrowRightCard' size={40} />
       </div>
       <div className={css.bottom}>
         <div className={css.subtitle}>{subtitle}</div>

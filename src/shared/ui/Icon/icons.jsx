@@ -1,33 +1,42 @@
 export const svgItems = {
-  arrowTopRight: (
-    <g strokeWidth='2' strokeMiterlimit='10'>
-      <path d='M20,12v7c0,0.552-0.448,1-1,1H5c-0.552,0-1-0.448-1-1V5c0-0.552,0.448-1,1-1h7' />
-      <polyline points='20,10 20,4 14,4 ' />
-      <line x1='20' y1='4' x2='9' y2='15' />
-    </g>
-  ),
-  arrowRight: (
-    <g strokeLinecap='round' strokeLinejoin='miter'>
-      <polyline points='13 17 18 12 13 7'></polyline>
-      <line x1='6' y1='12' x2='18' y2='12'></line>
-    </g>
-  ),
-  arrowRightCard: (
-    <g strokeLinecap='round' strokeLinejoin='miter'>
-      <path
-        d='M11.6667 11.6667H28.3334V28.3334'
-        strokeWidth='3.33333'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      />
-      <path
-        d='M11.6667 28.3334L28.3334 11.6667'
-        strokeWidth='3.33333'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      />
-    </g>
-  ),
+  arrowTopRight: {
+    draw: (
+      <g strokeWidth='2' strokeMiterlimit='10'>
+        <path d='M20,12v7c0,0.552-0.448,1-1,1H5c-0.552,0-1-0.448-1-1V5c0-0.552,0.448-1,1-1h7' />
+        <polyline points='20,10 20,4 14,4 ' />
+        <line x1='20' y1='4' x2='9' y2='15' />
+      </g>
+    ),
+    viewBox: '0 0 24 24',
+  },
+  arrowRight: {
+    draw: (
+      <g strokeLinecap='round' strokeLinejoin='miter'>
+        <polyline points='13 17 18 12 13 7'></polyline>
+        <line x1='6' y1='12' x2='18' y2='12'></line>
+      </g>
+    ),
+    viewBox: '0 0 24 24',
+  },
+  arrowRightCard: {
+    draw: (
+      <g strokeLinecap='round' strokeLinejoin='miter'>
+        <path
+          d='M11.6667 11.6667H28.3334V28.3334'
+          strokeWidth='3.33333'
+          strokeLinecap='round'
+          strokeLinejoin='round'
+        />
+        <path
+          d='M11.6667 28.3334L28.3334 11.6667'
+          strokeWidth='3.33333'
+          strokeLinecap='round'
+          strokeLinejoin='round'
+        />
+      </g>
+    ),
+    viewBox: '0 0 40 40',
+  },
   telegram: {
     draw: (
       <g strokeLinecap='round' strokeLinejoin='miter'>
@@ -71,7 +80,6 @@ export const svgItems = {
       <g strokeLinecap='round' strokeLinejoin='miter'>
         <path
           d='M17.5 2.33337H6.99996C6.38112 2.33337 5.78763 2.57921 5.35004 3.01679C4.91246 3.45438 4.66663 4.04787 4.66663 4.66671V23.3334C4.66663 23.9522 4.91246 24.5457 5.35004 24.9833C5.78763 25.4209 6.38112 25.6667 6.99996 25.6667H21C21.6188 25.6667 22.2123 25.4209 22.6499 24.9833C23.0875 24.5457 23.3333 23.9522 23.3333 23.3334V8.16671L17.5 2.33337Z'
-          stroke='#6FBF8F'
           strokeWidth='1.33333'
           strokeLinecap='round'
           strokeLinejoin='round'

@@ -1,7 +1,8 @@
 import { svgItems } from './icons'
 
 const Icon = (props) => {
-  const { className, name, viewBox = '0 0 24 24', size = '24px' } = props
+  const { className, name, size = 24 } = props
+  const { draw, viewBox } = svgItems[name]
 
   return (
     <svg
@@ -13,7 +14,7 @@ const Icon = (props) => {
       stroke='currentColor'
       aria-hidden='true'
     >
-      {svgItems[name].draw !== undefined ? svgItems[name].draw : svgItems[name]}
+      {draw}
     </svg>
   )
 }

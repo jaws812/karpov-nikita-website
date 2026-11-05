@@ -6,7 +6,6 @@ import ContactCard from '@/shared/ui/ContactCard'
 import css from './FooterCards.module.scss'
 import clsx from 'clsx'
 import TiltCard from '@/shared/ui/TiltCard'
-import { svgItems } from '@/shared/ui/Icon/icons'
 
 const FooterCards = () => {
   const accentCard = cardItems[0]
@@ -35,8 +34,7 @@ const FooterCards = () => {
                   {...accentCard}
                   href={contacts[accentCard.linkType].link}
                   name={contacts[accentCard.linkType].name}
-                  size={contacts[accentCard.linkType].widthIcon}
-                  viewBox={svgItems[accentCard.linkType].viewBox}
+                  size={contacts[accentCard.linkType].iconSize}
                 />
               </TiltCard>
             )}
@@ -48,8 +46,7 @@ const FooterCards = () => {
                       {...item}
                       href={contacts[item.linkType].link}
                       name={contacts[item.linkType].name}
-                      size={contacts[item.linkType].widthIcon}
-                      viewBox={svgItems[item.linkType].viewBox}
+                      size={contacts[item.linkType].iconSize}
                       key={item.title}
                     />
                   )
